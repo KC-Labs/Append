@@ -20,5 +20,10 @@ struct Font {
             return UIFont(name: "SFProText-Semibold", size: size)!
         }
     }
+    struct bold {
+        static func withSize(size: CGFloat) -> UIFont {
+            return UIFont(name: "SFProText-Bold", size: size)!
+        }
+    }
     
 }

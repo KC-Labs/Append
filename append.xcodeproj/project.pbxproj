@@ -20,6 +20,9 @@
 		F02ACAB326EC90C6000B0E81 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F02ACAAF26EC90C5000B0E81 /* SF-Pro-Text-Bold.otf */; };
 		F02ACAB426EC90C6000B0E81 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F02ACAB026EC90C5000B0E81 /* SF-Pro-Text-Medium.otf */; };
 		F02ACAB526EC90C6000B0E81 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F02ACAB126EC90C6000B0E81 /* SF-Pro-Text-Regular.otf */; };
+		F02C421A26ED434F006C40F7 /* SavedPassesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02C421926ED434F006C40F7 /* SavedPassesCell.swift */; };
+		F02C421C26ED4444006C40F7 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02C421B26ED4444006C40F7 /* HeaderView.swift */; };
+		F02C422026ED506E006C40F7 /* objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02C421F26ED506E006C40F7 /* objects.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		F02ACAAF26EC90C5000B0E81 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
 		F02ACAB026EC90C5000B0E81 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
 		F02ACAB126EC90C6000B0E81 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		F02C421926ED434F006C40F7 /* SavedPassesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPassesCell.swift; sourceTree = "<group>"; };
+		F02C421B26ED4444006C40F7 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		F02C421F26ED506E006C40F7 /* objects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = objects.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,11 +115,11 @@
 		F02ACA7726EC7714000B0E81 /* append */ = {
 			isa = PBXGroup;
 			children = (
+				F02C421D26ED4F54006C40F7 /* views */,
 				F02ACAAD26EC9062000B0E81 /* fonts */,
 				F02ACAA826EC7C73000B0E81 /* helpers */,
 				F02ACA7826EC7714000B0E81 /* AppDelegate.swift */,
 				F02ACA7A26EC7714000B0E81 /* SceneDelegate.swift */,
-				F02ACA7C26EC7714000B0E81 /* Home.swift */,
 				F02ACA8126EC7715000B0E81 /* Assets.xcassets */,
 				F02ACA8326EC7715000B0E81 /* LaunchScreen.storyboard */,
 				F02ACA8626EC7715000B0E81 /* Info.plist */,
@@ -144,6 +150,7 @@
 			children = (
 				F02ACAA926EC7C7F000B0E81 /* global.swift */,
 				F02ACAAB26EC8537000B0E81 /* extensions.swift */,
+				F02C421F26ED506E006C40F7 /* objects.swift */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -157,6 +164,24 @@
 				F02ACAAE26EC90C5000B0E81 /* SF-Pro-Text-Semibold.otf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		F02C421D26ED4F54006C40F7 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				F02C421E26ED4F5B006C40F7 /* home */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		F02C421E26ED4F5B006C40F7 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				F02ACA7C26EC7714000B0E81 /* Home.swift */,
+				F02C421B26ED4444006C40F7 /* HeaderView.swift */,
+				F02C421926ED434F006C40F7 /* SavedPassesCell.swift */,
+			);
+			path = home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,8 +317,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F02C421C26ED4444006C40F7 /* HeaderView.swift in Sources */,
 				F02ACAAC26EC8537000B0E81 /* extensions.swift in Sources */,
+				F02C422026ED506E006C40F7 /* objects.swift in Sources */,
 				F02ACA7D26EC7714000B0E81 /* Home.swift in Sources */,
+				F02C421A26ED434F006C40F7 /* SavedPassesCell.swift in Sources */,
 				F02ACAAA26EC7C7F000B0E81 /* global.swift in Sources */,
 				F02ACA7926EC7714000B0E81 /* AppDelegate.swift in Sources */,
 				F02ACA7B26EC7714000B0E81 /* SceneDelegate.swift in Sources */,
