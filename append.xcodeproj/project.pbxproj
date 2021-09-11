@@ -9,11 +9,17 @@
 /* Begin PBXBuildFile section */
 		F02ACA7926EC7714000B0E81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02ACA7826EC7714000B0E81 /* AppDelegate.swift */; };
 		F02ACA7B26EC7714000B0E81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02ACA7A26EC7714000B0E81 /* SceneDelegate.swift */; };
-		F02ACA7D26EC7714000B0E81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02ACA7C26EC7714000B0E81 /* ViewController.swift */; };
+		F02ACA7D26EC7714000B0E81 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02ACA7C26EC7714000B0E81 /* Home.swift */; };
 		F02ACA8226EC7715000B0E81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F02ACA8126EC7715000B0E81 /* Assets.xcassets */; };
 		F02ACA8526EC7715000B0E81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F02ACA8326EC7715000B0E81 /* LaunchScreen.storyboard */; };
 		F02ACA9026EC7715000B0E81 /* appendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02ACA8F26EC7715000B0E81 /* appendTests.swift */; };
 		F02ACA9B26EC7715000B0E81 /* appendUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02ACA9A26EC7715000B0E81 /* appendUITests.swift */; };
+		F02ACAAA26EC7C7F000B0E81 /* global.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02ACAA926EC7C7F000B0E81 /* global.swift */; };
+		F02ACAAC26EC8537000B0E81 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02ACAAB26EC8537000B0E81 /* extensions.swift */; };
+		F02ACAB226EC90C6000B0E81 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F02ACAAE26EC90C5000B0E81 /* SF-Pro-Text-Semibold.otf */; };
+		F02ACAB326EC90C6000B0E81 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F02ACAAF26EC90C5000B0E81 /* SF-Pro-Text-Bold.otf */; };
+		F02ACAB426EC90C6000B0E81 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F02ACAB026EC90C5000B0E81 /* SF-Pro-Text-Medium.otf */; };
+		F02ACAB526EC90C6000B0E81 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F02ACAB126EC90C6000B0E81 /* SF-Pro-Text-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +43,7 @@
 		F02ACA7526EC7714000B0E81 /* append.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = append.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F02ACA7826EC7714000B0E81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F02ACA7A26EC7714000B0E81 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F02ACA7C26EC7714000B0E81 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F02ACA7C26EC7714000B0E81 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		F02ACA8126EC7715000B0E81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F02ACA8426EC7715000B0E81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F02ACA8626EC7715000B0E81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +53,12 @@
 		F02ACA9626EC7715000B0E81 /* appendUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = appendUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F02ACA9A26EC7715000B0E81 /* appendUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appendUITests.swift; sourceTree = "<group>"; };
 		F02ACA9C26EC7715000B0E81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F02ACAA926EC7C7F000B0E81 /* global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = global.swift; sourceTree = "<group>"; };
+		F02ACAAB26EC8537000B0E81 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		F02ACAAE26EC90C5000B0E81 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
+		F02ACAAF26EC90C5000B0E81 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
+		F02ACAB026EC90C5000B0E81 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
+		F02ACAB126EC90C6000B0E81 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +109,11 @@
 		F02ACA7726EC7714000B0E81 /* append */ = {
 			isa = PBXGroup;
 			children = (
+				F02ACAAD26EC9062000B0E81 /* fonts */,
+				F02ACAA826EC7C73000B0E81 /* helpers */,
 				F02ACA7826EC7714000B0E81 /* AppDelegate.swift */,
 				F02ACA7A26EC7714000B0E81 /* SceneDelegate.swift */,
-				F02ACA7C26EC7714000B0E81 /* ViewController.swift */,
+				F02ACA7C26EC7714000B0E81 /* Home.swift */,
 				F02ACA8126EC7715000B0E81 /* Assets.xcassets */,
 				F02ACA8326EC7715000B0E81 /* LaunchScreen.storyboard */,
 				F02ACA8626EC7715000B0E81 /* Info.plist */,
@@ -123,6 +137,26 @@
 				F02ACA9C26EC7715000B0E81 /* Info.plist */,
 			);
 			path = appendUITests;
+			sourceTree = "<group>";
+		};
+		F02ACAA826EC7C73000B0E81 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F02ACAA926EC7C7F000B0E81 /* global.swift */,
+				F02ACAAB26EC8537000B0E81 /* extensions.swift */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
+		F02ACAAD26EC9062000B0E81 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F02ACAAF26EC90C5000B0E81 /* SF-Pro-Text-Bold.otf */,
+				F02ACAB026EC90C5000B0E81 /* SF-Pro-Text-Medium.otf */,
+				F02ACAB126EC90C6000B0E81 /* SF-Pro-Text-Regular.otf */,
+				F02ACAAE26EC90C5000B0E81 /* SF-Pro-Text-Semibold.otf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,7 +262,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F02ACAB526EC90C6000B0E81 /* SF-Pro-Text-Regular.otf in Resources */,
+				F02ACAB226EC90C6000B0E81 /* SF-Pro-Text-Semibold.otf in Resources */,
 				F02ACA8526EC7715000B0E81 /* LaunchScreen.storyboard in Resources */,
+				F02ACAB326EC90C6000B0E81 /* SF-Pro-Text-Bold.otf in Resources */,
+				F02ACAB426EC90C6000B0E81 /* SF-Pro-Text-Medium.otf in Resources */,
 				F02ACA8226EC7715000B0E81 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,7 +292,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F02ACA7D26EC7714000B0E81 /* ViewController.swift in Sources */,
+				F02ACAAC26EC8537000B0E81 /* extensions.swift in Sources */,
+				F02ACA7D26EC7714000B0E81 /* Home.swift in Sources */,
+				F02ACAAA26EC7C7F000B0E81 /* global.swift in Sources */,
 				F02ACA7926EC7714000B0E81 /* AppDelegate.swift in Sources */,
 				F02ACA7B26EC7714000B0E81 /* SceneDelegate.swift in Sources */,
 			);
