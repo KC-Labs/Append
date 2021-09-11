@@ -10,7 +10,6 @@
 		F02ACA7926EC7714000B0E81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02ACA7826EC7714000B0E81 /* AppDelegate.swift */; };
 		F02ACA7B26EC7714000B0E81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02ACA7A26EC7714000B0E81 /* SceneDelegate.swift */; };
 		F02ACA7D26EC7714000B0E81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02ACA7C26EC7714000B0E81 /* ViewController.swift */; };
-		F02ACA8026EC7714000B0E81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F02ACA7E26EC7714000B0E81 /* Main.storyboard */; };
 		F02ACA8226EC7715000B0E81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F02ACA8126EC7715000B0E81 /* Assets.xcassets */; };
 		F02ACA8526EC7715000B0E81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F02ACA8326EC7715000B0E81 /* LaunchScreen.storyboard */; };
 		F02ACA9026EC7715000B0E81 /* appendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02ACA8F26EC7715000B0E81 /* appendTests.swift */; };
@@ -39,7 +38,6 @@
 		F02ACA7826EC7714000B0E81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F02ACA7A26EC7714000B0E81 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F02ACA7C26EC7714000B0E81 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F02ACA7F26EC7714000B0E81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F02ACA8126EC7715000B0E81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F02ACA8426EC7715000B0E81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F02ACA8626EC7715000B0E81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 				F02ACA7826EC7714000B0E81 /* AppDelegate.swift */,
 				F02ACA7A26EC7714000B0E81 /* SceneDelegate.swift */,
 				F02ACA7C26EC7714000B0E81 /* ViewController.swift */,
-				F02ACA7E26EC7714000B0E81 /* Main.storyboard */,
 				F02ACA8126EC7715000B0E81 /* Assets.xcassets */,
 				F02ACA8326EC7715000B0E81 /* LaunchScreen.storyboard */,
 				F02ACA8626EC7715000B0E81 /* Info.plist */,
@@ -233,7 +230,6 @@
 			files = (
 				F02ACA8526EC7715000B0E81 /* LaunchScreen.storyboard in Resources */,
 				F02ACA8226EC7715000B0E81 /* Assets.xcassets in Resources */,
-				F02ACA8026EC7714000B0E81 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +292,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F02ACA7E26EC7714000B0E81 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F02ACA7F26EC7714000B0E81 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F02ACA8326EC7715000B0E81 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -366,7 +354,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -421,7 +409,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -439,7 +427,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 698LHTYCM9;
 				INFOPLIST_FILE = append/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,7 +447,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 698LHTYCM9;
 				INFOPLIST_FILE = append/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
