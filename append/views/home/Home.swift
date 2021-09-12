@@ -73,7 +73,8 @@ class Home: UIViewController {
             bgView.heightAnchor.constraint(equalTo: collectionView.heightAnchor).isActive = true
         } else {
             collectionView.backgroundView = nil
-        }
+        }}
+    
     // pushes the camera view
     @objc func pushCamera(_ notification: Notification) {
         let camera = Camera()
