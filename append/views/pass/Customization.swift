@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SafariServices
+import UIKit
 
 class Customization: UIViewController {
     
@@ -36,6 +38,25 @@ class Customization: UIViewController {
     }()
     private var preview = UIView()
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    
+    func showWalletPage() {
+        func process(walletLink: String) -> Void {
+            print("generatePass completed")
+            print("walletLink: " + walletLink)
+            
+            // open in safari
+            let config = SFSafariViewController.Configuration()
+            config.entersReaderIfAvailable = true
+
+            let safariVC = SFSafariViewController(url: URL(string: walletLink)!, configuration: config)
+            present(safariVC, animated: true)
+        }
+        
+        let indexOfColor = Color.customColors.firstIndex{$0 == pass.color}!
+        print("found color index: " + indexOfColor.description)
+        
+        PSInterface.generatePass(whenCompleted: process, mainText: pass.title, subText: pass.note!, barcodeData: pass.barcodeData!, colorIndex: indexOfColor)
+    }
     
     @objc func back() {
         if !isFinished {
