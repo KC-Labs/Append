@@ -7,6 +7,7 @@
 
 import UIKit
 import PassKit
+import SafariServices
 
 class PassDetail: UIViewController {
     
@@ -91,9 +92,29 @@ class PassDetail: UIViewController {
         }
     }
     
+    func showWalletPage() {
+        func process(walletLink: String) -> Void {
+            print("generatePass completed")
+            print("walletLink: " + walletLink)
+            
+            // open in safari
+            let config = SFSafariViewController.Configuration()
+            config.entersReaderIfAvailable = true
+
+            let safariVC = SFSafariViewController(url: URL(string: walletLink)!, configuration: config)
+            present(safariVC, animated: true)
+        }
+        
+        let indexOfColor = Color.customColors.firstIndex{$0 == data.color}!
+        print("found color index: " + indexOfColor.description)
+        
+        PSInterface.generatePass(whenCompleted: process, mainText: data.title, subText: data.note!, barcodeData: data.barcodeData!, colorIndex: indexOfColor)
+    }
+    
     @objc func addToWalletAction(sender: UIButton) {
         sender.showAnimation {
             //TODO: ADD TO WALLET HERE
+            self.showWalletPage()
         }
     }
     

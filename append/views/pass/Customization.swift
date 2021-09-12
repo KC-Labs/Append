@@ -111,6 +111,7 @@ class Customization: UIViewController {
     @objc func addToWalletAction(sender: UIButton) {
         sender.showAnimation {
             //TODO: ADD TO WALLET HERE
+            self.showWalletPage()
         }
     }
     
