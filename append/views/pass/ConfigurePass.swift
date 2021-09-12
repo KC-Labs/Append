@@ -77,6 +77,17 @@ class ConfigurePass: UIViewController {
         dismiss(animated: true)
     }
     
+    @objc func goNext() {
+        validateForm()
+        print("codeData: " + codeData!)
+        let barcode: String = codeData!
+        let title = pendingPass.title
+        let text = pendingPass.note
+        let ans = PSInterface.generatePass(whenCompleted: {() -> Void in print("generatePass completed")}, mainText: "main test", subText: "sub test", barcodeData: "12345")
+        print("received ans: " + ans)
+    }
+    
+    // do your validation here
     @objc func validateForm() {
         //TODO: check if same name exists
         let vc = Customization()
