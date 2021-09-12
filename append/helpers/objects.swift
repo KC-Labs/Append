@@ -42,6 +42,7 @@ class Pass {
     }
     
     func generateScannable() -> UIImage? {
+        
         return nil
     }
     

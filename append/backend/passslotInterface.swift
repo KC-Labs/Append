@@ -13,7 +13,7 @@ import UIKit
 class PSInterface {
     
     // calls the api with the following information and returns the URL
-    static func generatePass(whenCompleted: () -> Void, mainText: String, subText: String, barcodeData: String, barcodeText: String? = nil ) -> String {
+    static func generatePass(whenCompleted: @escaping () -> Void, mainText: String, subText: String, barcodeData: String, barcodeText: String? = nil ) -> String {
         let params = ["mainText": mainText, "subText": subText, "barcodeID": barcodeData, "barcodeText": barcodeText ?? ""] as Dictionary<String, String>
         var request = URLRequest(url: URL(string: "https://api.passslot.com/v1/templates/" + psAccess.templateID + "/pass")!)
         let loginString = String(psAccess.username+":")
@@ -30,7 +30,8 @@ class PSInterface {
         var url: String? = nil
         
         print("here")
-        let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in
+        let task = session.dataTask(with: request, completionHandler: {data, response, error -> Void in
+            
             whenCompleted()
             print(response!)
             do {

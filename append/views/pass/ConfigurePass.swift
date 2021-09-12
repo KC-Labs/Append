@@ -83,13 +83,13 @@ class ConfigurePass: UIViewController {
         let barcode: String = codeData!
         let title = pendingPass.title
         let text = pendingPass.note
-        let ans = PSInterface.generatePass(whenCompleted: , mainText: "main test", subText: "sub test", barcodeData: "12345")
+        let ans = PSInterface.generatePass(whenCompleted: {() -> Void in print("generatePass completed")}, mainText: "main test", subText: "sub test", barcodeData: "12345")
         print("received ans: " + ans)
     }
     
     // do your validation here
     @objc func validateForm() {
-       
+       return
     }
     
     @objc func pickEmoji() {
