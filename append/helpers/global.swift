@@ -69,3 +69,10 @@ extension Int {
     var s: CGFloat { return CGFloat(self) * floatRatio}
 }
 
+
+// passslot access details
+struct psAccess {
+    static let templateID = "4629516633505792"
+    static let username = "qRzZLVoAsRBEJcOUjWqgUyhxIZvLhooUnpdCGCYvtMLNaVNasonRhqjBAFZZksZz"
+    
+}
