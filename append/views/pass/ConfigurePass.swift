@@ -77,6 +77,17 @@ class ConfigurePass: UIViewController {
         dismiss(animated: true)
     }
     
+    @objc func goNext() {
+        validateForm()
+        print("codeData: " + codeData!)
+        let barcode: String = codeData!
+        let title = pendingPass.title
+        let text = pendingPass.note
+        let ans = PSInterface.generatePass(whenCompleted: , mainText: "main test", subText: "sub test", barcodeData: "12345")
+        print("received ans: " + ans)
+    }
+    
+    // do your validation here
     @objc func validateForm() {
        
     }
@@ -118,7 +129,7 @@ class ConfigurePass: UIViewController {
         view.addSubview(nextButton)
         nextButton.centerYAnchor.constraint(equalTo: titleText.centerYAnchor).isActive = true
         nextButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -40).isActive = true
-        nextButton.addTarget(self, action: #selector(validateForm), for: .touchUpInside)
+        nextButton.addTarget(self, action: #selector(goNext), for: .touchUpInside)
         nextButton.updateColor(to: (shouldAllowNext()) ? Color.action : UIColor.white.withAlphaComponent(0.5))
         view.addSubview(icon)
         icon.topAnchor.constraint(equalTo: titleText.bottomAnchor, constant: 32).isActive = true

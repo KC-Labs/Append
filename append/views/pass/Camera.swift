@@ -52,10 +52,7 @@ class Camera: UIViewController {
             let configure = ConfigurePass()
             configure.codeData = payload!
             configure.codeSymbology = symbology
-            let passDetail = PassDetail()
-            // self.present(passDetail, animated:true)
-            let ans = PSInterface.generatePass(mainText: "main test", subText: "sub test", barcodeData: "12345")
-            print("received ans: " + ans)
+            self.present(configure, animated:true)
         } else if payload != nil {
             print("payload was nil. cannot do anything.")
         }
