@@ -54,6 +54,22 @@ var placeholderData: [Pass] = [
     Pass(icon: "🐻", title: "Cal 1 Card", color: Color.customColors.first!, type: "Membership Card", note: nil),
 ]
 
+var floatRatio: CGFloat = 1
+var doubleRatio: Double = 1
+
+extension CGFloat {
+    var s: CGFloat { return self * floatRatio}
+}
+
+extension Double {
+    var s: CGFloat { return CGFloat(self) * floatRatio}
+}
+
+extension Int {
+    var s: CGFloat { return CGFloat(self) * floatRatio}
+}
+
+
 // passslot access details
 struct psAccess {
     static let templateID = "4629516633505792"

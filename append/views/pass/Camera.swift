@@ -50,6 +50,7 @@ class Camera: UIViewController {
             print("code text: " + payload!)
             print("code symbology: " + symbology.rawValue)
             let configure = ConfigurePass()
+            configure.modalPresentationStyle = .fullScreen
             configure.codeData = payload!
             configure.codeSymbology = symbology
             self.present(configure, animated:true)
