@@ -16,6 +16,7 @@ class ConfigurePass: UIViewController {
     public var codeSymbology: VNBarcodeSymbology?
     
     override func viewDidLoad() {
+        
         print("we got here")
     }
 }
