@@ -93,6 +93,7 @@ class PassDetail: UIViewController {
     }
     
     func showWalletPage() {
+        
         func process(walletLink: String) -> Void {
             print("generatePass completed")
             print("walletLink: " + walletLink)
