@@ -17,6 +17,8 @@ import SafariServices
 class Camera: UIViewController {
     // MARK: - Private Variables
     var captureSession = AVCaptureSession()
+    
+    var fired = false
 
     // TODO: Make VNDetectBarcodesRequest variable
     lazy var detectBarcodeRequest = VNDetectBarcodesRequest { request, error in
@@ -42,15 +44,21 @@ class Camera: UIViewController {
     
     func handleObservedData(payload: String?, symbology: VNBarcodeSymbology) {
         // push next view
-        if payload != nil {
+        if payload != nil && !fired {
+            fired = true
+            print("-----------")
+            print("code text: " + payload!)
+            print("code symbology: " + symbology.rawValue)
             let configure = ConfigurePass()
             configure.codeData = payload!
             configure.codeSymbology = symbology
-            self.present(configure, animated:true)
-        } else {
+            let passDetail = PassDetail()
+            // self.present(passDetail, animated:true)
+            let ans = PSInterface.generatePass(mainText: "main test", subText: "sub test", barcodeData: "12345")
+            print("received ans: " + ans)
+        } else if payload != nil {
             print("payload was nil. cannot do anything.")
         }
-        
         
     }
 }
@@ -121,9 +129,6 @@ extension Camera {
                         let code = barcode as? VNBarcodeObservation,
                         code.confidence > 0.9
                         else { return }
-                    print("-----------")
-                    print("code text: " + code.payloadStringValue!)
-                    print("code symbology: " + code.symbology.rawValue)
 
                     handleObservedData(payload: code.payloadStringValue, symbology: code.symbology)
                 }

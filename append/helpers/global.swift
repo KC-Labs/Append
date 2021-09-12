@@ -53,3 +53,10 @@ var placeholderData: [Pass] = [
     Pass(icon: "💻", title: "Laptop ID", color: Color.customColors.first!, type: "Membership Card", note: nil),
     Pass(icon: "🐻", title: "Cal 1 Card", color: Color.customColors.first!, type: "Membership Card", note: nil),
 ]
+
+// passslot access details
+struct psAccess {
+    static let templateID = "4629516633505792"
+    static let username = "qRzZLVoAsRBEJcOUjWqgUyhxIZvLhooUnpdCGCYvtMLNaVNasonRhqjBAFZZksZz"
+    
+}
