@@ -40,7 +40,7 @@ class Home: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         collectionView.reloadData()
-        if (placeholderData.isEmpty) {
+        if (myPasses.isEmpty) {
             let icon: UILabel = {
                 let l = UILabel()
                 l.translatesAutoresizingMaskIntoConstraints = false
@@ -88,12 +88,12 @@ class Home: UIViewController {
 extension Home: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return placeholderData.count
+        return myPasses.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SavedPassesCell.identifier, for: indexPath) as! SavedPassesCell
-        cell.data = placeholderData[indexPath.item]
+        cell.data = myPasses[indexPath.item]
         return cell
     }
     
@@ -126,9 +126,11 @@ extension Home: UICollectionViewDelegate, UICollectionViewDataSource, UICollecti
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = PassDetail()
         vc.modalPresentationStyle = .fullScreen
-        vc.data = placeholderData[indexPath.item]
+        vc.data = myPasses[indexPath.item]
         present(vc, animated: true)
     }
     
     
 }
+
+//TO REVERT: CHANGE ALL MY PASSES TO PLACEHOLDER
