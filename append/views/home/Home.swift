@@ -37,6 +37,41 @@ class Home: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         collectionView.reloadData()
+        if (placeholderData.isEmpty) {
+            let icon: UILabel = {
+                let l = UILabel()
+                l.translatesAutoresizingMaskIntoConstraints = false
+                l.text = "📭"
+                l.font = Font.medium.withSize(size: 54)
+                l.textAlignment = .center
+                return l
+            }()
+            let label: UILabel = {
+                let l = UILabel()
+                l.translatesAutoresizingMaskIntoConstraints = false
+                l.text = "No saved passes"
+                l.font = Font.medium.withSize(size: 14)
+                l.textAlignment = .center
+                return l
+            }()
+            let bgView = UIView()
+            bgView.translatesAutoresizingMaskIntoConstraints = false
+            bgView.addSubview(icon)
+            bgView.addSubview(label)
+            collectionView.backgroundView = bgView
+            icon.centerXAnchor.constraint(equalTo: bgView.centerXAnchor).isActive = true
+            icon.centerYAnchor.constraint(equalTo: bgView.centerYAnchor).isActive = true
+            icon.widthAnchor.constraint(equalTo: collectionView.widthAnchor).isActive = true
+            label.centerXAnchor.constraint(equalTo: bgView.centerXAnchor).isActive = true
+            label.topAnchor.constraint(equalTo: icon.bottomAnchor, constant: 10).isActive = true
+            label.widthAnchor.constraint(equalTo: collectionView.widthAnchor).isActive = true
+            bgView.centerYAnchor.constraint(equalTo: collectionView.centerYAnchor).isActive = true
+            bgView.centerXAnchor.constraint(equalTo: collectionView.centerXAnchor).isActive = true
+            bgView.widthAnchor.constraint(equalTo: collectionView.widthAnchor).isActive = true
+            bgView.heightAnchor.constraint(equalTo: collectionView.heightAnchor).isActive = true
+        } else {
+            collectionView.backgroundView = nil
+        }
     }
     
 }
