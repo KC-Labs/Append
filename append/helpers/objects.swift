@@ -5,15 +5,101 @@
 //  Created by Patrick Cui on 9/11/21.
 //
 
-import Foundation
+import UIKit
+import PassKit
+
+var passTypes = ["Membership Card", "ID Card", "Ticket", "Other"]
 
 class Pass {
     public var icon: String
     public var title: String
+    public var color: UIColor
+    public var type: String
+    public var note: String?
     
-    init(icon: String, title: String) {
+    init(icon: String, title: String, color: UIColor, type: String, note: String?) {
         self.icon = icon
         self.title = title
+        self.color = color
+        self.type = type
+        self.note = note
+    }
+    
+    func preview() -> UIView {
+        let logoView: UIImageView = {
+            let logoView = UIImageView()
+            logoView.translatesAutoresizingMaskIntoConstraints = false
+            logoView.image = UIImage(named: "logo")
+            logoView.contentMode = .scaleAspectFit
+            return logoView
+        }()
+        let typeLabel: UILabel = {
+            let label = UILabel()
+            label.translatesAutoresizingMaskIntoConstraints = false
+            label.font = Font.ny.withSize(size: 12)
+            label.text = type
+            label.numberOfLines = 1
+            label.adjustsFontSizeToFitWidth = true
+            label.minimumScaleFactor = 0.8
+            label.textAlignment = .center
+            return label
+        }()
+        let titleLabel: UILabel = {
+            let label = UILabel()
+            label.translatesAutoresizingMaskIntoConstraints = false
+            label.text = icon + " " + title
+            label.font = Font.bold.withSize(size: 20)
+            label.adjustsFontSizeToFitWidth = true
+            label.textAlignment = .center
+            label.numberOfLines = 1
+            return label
+        }()
+        let noteLabel: UILabel = {
+            let label = UILabel()
+            label.translatesAutoresizingMaskIntoConstraints = false
+            label.text = note ?? ""
+            label.font = Font.regular.withSize(size: 12)
+            label.numberOfLines = 3
+            label.adjustsFontSizeToFitWidth = true
+            label.textAlignment = .center
+            label.minimumScaleFactor = 0.5
+            return label
+        }()
+        let scannable: UIView = {
+            let v = UIView()
+            v.translatesAutoresizingMaskIntoConstraints = false
+            v.backgroundColor = UIColor.white
+            return v
+        }()
+        let view: UIView = {
+            let v = UIView()
+            v.translatesAutoresizingMaskIntoConstraints = false
+            v.backgroundColor = color
+            v.layer.cornerRadius = 10
+            return v
+        }()
+        view.addSubview(logoView)
+        logoView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        logoView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
+        logoView.widthAnchor.constraint(equalToConstant: 80).isActive = true
+        view.addSubview(typeLabel)
+        typeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        typeLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 64).isActive = true
+        typeLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8).isActive = true
+        view.addSubview(titleLabel)
+        titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: typeLabel.bottomAnchor, constant: 16).isActive = true
+        titleLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8).isActive = true
+        view.addSubview(noteLabel)
+        noteLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        noteLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
+        noteLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8).isActive = true
+        view.addSubview(scannable)
+        scannable.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        scannable.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        scannable.heightAnchor.constraint(equalToConstant: 75).isActive = true
+        scannable.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50).isActive = true
+        return view
     }
     
 }
