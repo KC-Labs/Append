@@ -31,6 +31,8 @@
 		F02C422326ED5816006C40F7 /* PassDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02C422226ED5816006C40F7 /* PassDetail.swift */; };
 		F02C422526ED6035006C40F7 /* elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02C422426ED6035006C40F7 /* elements.swift */; };
 		F02C422726ED6FFD006C40F7 /* NewYorkLargeRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F02C422626ED6FFD006C40F7 /* NewYorkLargeRegular.otf */; };
+		F087F14826EDDF18000C8ACC /* ChooseCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F087F14726EDDF18000C8ACC /* ChooseCategory.swift */; };
+		F087F14A26EDE10F000C8ACC /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F087F14926EDE10F000C8ACC /* CategoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		F02C422226ED5816006C40F7 /* PassDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassDetail.swift; sourceTree = "<group>"; };
 		F02C422426ED6035006C40F7 /* elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = elements.swift; sourceTree = "<group>"; };
 		F02C422626ED6FFD006C40F7 /* NewYorkLargeRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NewYorkLargeRegular.otf; sourceTree = "<group>"; };
+		F087F14726EDDF18000C8ACC /* ChooseCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCategory.swift; sourceTree = "<group>"; };
+		F087F14926EDE10F000C8ACC /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +247,8 @@
 				C51BC4BF26ED835F00D242ED /* ConfigurePass.swift */,
 				C5C44BAB26ED647E004B70EA /* Camera.swift */,
 				F02C422226ED5816006C40F7 /* PassDetail.swift */,
+				F087F14726EDDF18000C8ACC /* ChooseCategory.swift */,
+				F087F14926EDE10F000C8ACC /* CategoryCell.swift */,
 			);
 			path = pass;
 			sourceTree = "<group>";
@@ -492,6 +498,7 @@
 				F02C421C26ED4444006C40F7 /* HeaderView.swift in Sources */,
 				F02ACAAC26EC8537000B0E81 /* extensions.swift in Sources */,
 				F02C422326ED5816006C40F7 /* PassDetail.swift in Sources */,
+				F087F14A26EDE10F000C8ACC /* CategoryCell.swift in Sources */,
 				F02C422026ED506E006C40F7 /* objects.swift in Sources */,
 				F02ACA7D26EC7714000B0E81 /* Home.swift in Sources */,
 				F02C421A26ED434F006C40F7 /* SavedPassesCell.swift in Sources */,
@@ -500,6 +507,7 @@
 				C51BC4C026ED835F00D242ED /* ConfigurePass.swift in Sources */,
 				F02C422526ED6035006C40F7 /* elements.swift in Sources */,
 				F02ACA7B26EC7714000B0E81 /* SceneDelegate.swift in Sources */,
+				F087F14826EDDF18000C8ACC /* ChooseCategory.swift in Sources */,
 				C5C44BAC26ED647E004B70EA /* Camera.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

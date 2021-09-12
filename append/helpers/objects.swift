@@ -8,7 +8,7 @@
 import UIKit
 import PassKit
 
-var passTypes = ["Membership Card", "ID Card", "Ticket", "Other"]
+var passTypes = ["Membership Card", "ID Card", "Ticket", "Coupon", "Barcode", "QR Code", "Other"]
 
 class Pass {
     public var icon: String
@@ -23,6 +23,18 @@ class Pass {
         self.color = color
         self.type = type
         self.note = note
+    }
+    
+    func copy() -> Pass {
+        return Pass(icon: icon, title: title, color: color, type: type, note: note)
+    }
+    
+    func update(with other: Pass) {
+        icon = other.icon
+        title = other.title
+        color = other.color
+        type = other.type
+        note = other.note
     }
     
     func preview() -> UIView {
@@ -88,7 +100,7 @@ class Pass {
         typeLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8).isActive = true
         view.addSubview(titleLabel)
         titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        titleLabel.topAnchor.constraint(equalTo: typeLabel.bottomAnchor, constant: 16).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: typeLabel.bottomAnchor, constant: (note == nil) ? 32 : 16).isActive = true
         titleLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8).isActive = true
         view.addSubview(noteLabel)
         noteLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
