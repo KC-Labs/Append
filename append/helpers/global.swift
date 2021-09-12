@@ -59,6 +59,8 @@ var placeholderData: [Pass] = [
     Pass(icon: "🐻", title: "Cal 1 Card", color: Color.customColors.first!, type: "Membership Card", note: nil),
 ]
 
+var myPasses: [Pass] = []
+
 var floatRatio: CGFloat = 1
 var doubleRatio: Double = 1
 
@@ -79,5 +81,4 @@ extension Int {
 struct psAccess {
     static let templateID = "4629516633505792"
     static let username = "qRzZLVoAsRBEJcOUjWqgUyhxIZvLhooUnpdCGCYvtMLNaVNasonRhqjBAFZZksZz"
-    
 }

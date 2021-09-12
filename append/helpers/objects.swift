@@ -163,7 +163,7 @@ class Pass {
         scannable.widthAnchor.constraint(equalToConstant: 200.s).isActive = true
         scannable.heightAnchor.constraint(equalToConstant: 75.s).isActive = true
         scannable.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50.s).isActive = true
-        scannable.image = generateScannable()
+        scannable.image = generateScannable(width: 500, height: 150)
         return view
     }
     
