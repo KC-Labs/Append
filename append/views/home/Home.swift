@@ -76,6 +76,7 @@ class Home: UIViewController {
         }}
     
     // pushes the camera view
+
     @objc func pushCamera(_ notification: Notification) {
         let camera = Camera()
         self.present(camera, animated:true)
