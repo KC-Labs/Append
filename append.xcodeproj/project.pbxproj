@@ -25,6 +25,9 @@
 		F02C421A26ED434F006C40F7 /* SavedPassesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02C421926ED434F006C40F7 /* SavedPassesCell.swift */; };
 		F02C421C26ED4444006C40F7 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02C421B26ED4444006C40F7 /* HeaderView.swift */; };
 		F02C422026ED506E006C40F7 /* objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02C421F26ED506E006C40F7 /* objects.swift */; };
+		F02C422326ED5816006C40F7 /* PassDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02C422226ED5816006C40F7 /* PassDetail.swift */; };
+		F02C422526ED6035006C40F7 /* elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02C422426ED6035006C40F7 /* elements.swift */; };
+		F02C422726ED6FFD006C40F7 /* NewYorkLargeRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F02C422626ED6FFD006C40F7 /* NewYorkLargeRegular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		F02C421926ED434F006C40F7 /* SavedPassesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPassesCell.swift; sourceTree = "<group>"; };
 		F02C421B26ED4444006C40F7 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		F02C421F26ED506E006C40F7 /* objects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = objects.swift; sourceTree = "<group>"; };
+		F02C422226ED5816006C40F7 /* PassDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassDetail.swift; sourceTree = "<group>"; };
+		F02C422426ED6035006C40F7 /* elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = elements.swift; sourceTree = "<group>"; };
+		F02C422626ED6FFD006C40F7 /* NewYorkLargeRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NewYorkLargeRegular.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +170,7 @@
 				F02ACAA926EC7C7F000B0E81 /* global.swift */,
 				F02ACAAB26EC8537000B0E81 /* extensions.swift */,
 				F02C421F26ED506E006C40F7 /* objects.swift */,
+				F02C422426ED6035006C40F7 /* elements.swift */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -171,6 +178,7 @@
 		F02ACAAD26EC9062000B0E81 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				F02C422626ED6FFD006C40F7 /* NewYorkLargeRegular.otf */,
 				F02ACAAF26EC90C5000B0E81 /* SF-Pro-Text-Bold.otf */,
 				F02ACAB026EC90C5000B0E81 /* SF-Pro-Text-Medium.otf */,
 				F02ACAB126EC90C6000B0E81 /* SF-Pro-Text-Regular.otf */,
@@ -183,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				C5C44BAA26ED6468004B70EA /* makePass */,
+				F02C422126ED57F3006C40F7 /* pass */,
 				F02C421E26ED4F5B006C40F7 /* home */,
 			);
 			path = views;
@@ -196,6 +205,14 @@
 				F02C421926ED434F006C40F7 /* SavedPassesCell.swift */,
 			);
 			path = home;
+			sourceTree = "<group>";
+		};
+		F02C422126ED57F3006C40F7 /* pass */ = {
+			isa = PBXGroup;
+			children = (
+				F02C422226ED5816006C40F7 /* PassDetail.swift */,
+			);
+			path = pass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F02C422726ED6FFD006C40F7 /* NewYorkLargeRegular.otf in Resources */,
 				F02ACAB526EC90C6000B0E81 /* SF-Pro-Text-Regular.otf in Resources */,
 				F02ACAB226EC90C6000B0E81 /* SF-Pro-Text-Semibold.otf in Resources */,
 				F02ACA8526EC7715000B0E81 /* LaunchScreen.storyboard in Resources */,
@@ -333,12 +351,14 @@
 			files = (
 				F02C421C26ED4444006C40F7 /* HeaderView.swift in Sources */,
 				F02ACAAC26EC8537000B0E81 /* extensions.swift in Sources */,
+				F02C422326ED5816006C40F7 /* PassDetail.swift in Sources */,
 				F02C422026ED506E006C40F7 /* objects.swift in Sources */,
 				F02ACA7D26EC7714000B0E81 /* Home.swift in Sources */,
 				F02C421A26ED434F006C40F7 /* SavedPassesCell.swift in Sources */,
 				F02ACAAA26EC7C7F000B0E81 /* global.swift in Sources */,
 				F02ACA7926EC7714000B0E81 /* AppDelegate.swift in Sources */,
 				C51BC4C026ED835F00D242ED /* ConfigurePass.swift in Sources */,
+				F02C422526ED6035006C40F7 /* elements.swift in Sources */,
 				F02ACA7B26EC7714000B0E81 /* SceneDelegate.swift in Sources */,
 				C5C44BAC26ED647E004B70EA /* Camera.swift in Sources */,
 			);
