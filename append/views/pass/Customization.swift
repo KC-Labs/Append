@@ -8,6 +8,7 @@
 import UIKit
 import SafariServices
 import UIKit
+import PassKit
 
 class Customization: UIViewController {
     
@@ -19,7 +20,6 @@ class Customization: UIViewController {
         }
     }
     var oldPass: Pass?
-    
     private let titleText: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -38,6 +38,20 @@ class Customization: UIViewController {
     }()
     private var preview = UIView()
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    private let addToWallet = PKAddPassButton(addPassButtonStyle: PKAddPassButtonStyle.blackOutline)
+    private let backToHome: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 10.s
+        button.layer.borderWidth = 2.s
+        button.layer.borderColor = Color.action.cgColor
+        button.setTitle("Back to Home", for: .normal)
+        button.titleLabel?.font = Font.medium.withSize(size: 16.s)
+        button.setTitleColor(Color.action, for: .normal)
+        return button
+    }()
+    
     
     func showWalletPage() {
         func process(walletLink: String) -> Void {
@@ -64,19 +78,42 @@ class Customization: UIViewController {
         }
     }
     
+    @objc func goHome() {
+        
+    }
+    
     @objc func finish() {
         if isFinished {
             // go home
         } else {
             isFinished = true
-            // update things
-            // save to cache
-            // append to array
-            // fade out color palletee
+            oldPass?.update(with: pass)
+            myPasses.append(pass)
+            //TODO: Cache
+            UIView.animate(withDuration: 0.2) {
+                self.collectionView.alpha = 0
+                self.backButton.alpha = 0
+            } completion: { _ in
+                UIView.animate(withDuration: 0.2) {
+                    self.addToWallet.alpha = 1
+                    self.backToHome.alpha = 1
+                }
+            }
+            backButton.isEnabled = false
+            addToWallet.isEnabled = true
+            backToHome.isEnabled = true
+            titleText.text = "Your Pass is Ready"
+            
             // fade in the other two views
         }
     }
-
+    
+    @objc func addToWalletAction(sender: UIButton) {
+        sender.showAnimation {
+            //TODO: ADD TO WALLET HERE
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = Color.bg
@@ -110,6 +147,7 @@ class Customization: UIViewController {
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "colorChoices")
         collectionView.backgroundColor = Color.bg
         collectionView.allowsMultipleSelection = false
+        addToWallet.addTarget(self, action: #selector(addToWalletAction), for: .touchUpInside)
     }
     
     override func viewDidLayoutSubviews() {
@@ -118,6 +156,21 @@ class Customization: UIViewController {
         collectionView.heightAnchor.constraint(equalToConstant: 180.s).isActive = true
         collectionView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         collectionView.topAnchor.constraint(equalTo: preview.bottomAnchor, constant: 36.s).isActive = true
+        view.addSubview(addToWallet)
+        addToWallet.translatesAutoresizingMaskIntoConstraints = false
+        addToWallet.topAnchor.constraint(equalTo: preview.bottomAnchor, constant: 50.s).isActive = true
+        addToWallet.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        addToWallet.widthAnchor.constraint(equalToConstant: 200.s).isActive = true
+        addToWallet.alpha = 0
+        addToWallet.isEnabled = false
+        view.addSubview(backToHome)
+        backToHome.topAnchor.constraint(equalTo: addToWallet.bottomAnchor, constant: 16.s).isActive = true
+        backToHome.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        backToHome.widthAnchor.constraint(equalToConstant: 200.s).isActive = true
+        backToHome.heightAnchor.constraint(equalTo: addToWallet.heightAnchor).isActive = true
+        backToHome.addTarget(self, action: #selector(goHome), for: .touchUpInside)
+        backToHome.alpha = 0
+        addToWallet.isEnabled = false
     }
     
 }

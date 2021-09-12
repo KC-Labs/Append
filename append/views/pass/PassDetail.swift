@@ -91,6 +91,12 @@ class PassDetail: UIViewController {
         }
     }
     
+    @objc func addToWalletAction(sender: UIButton) {
+        sender.showAnimation {
+            //TODO: ADD TO WALLET HERE
+        }
+    }
+    
     
     func layoutUI() {
         view.addSubview(backArrow)
