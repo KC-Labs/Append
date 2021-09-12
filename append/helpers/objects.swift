@@ -172,10 +172,11 @@ class Pass {
 class CacheManager {
     static func save() {
         var data: [PassStruct] = []
-        for p in myPasses {
+        for p in placeholderData {
             data.append(p.generateStruct())
         }
         do {
+            print(data)
             let encoder = JSONEncoder()
             let encoded = try encoder.encode(data)
             UserDefaults.standard.set(encoded, forKey: "passes")

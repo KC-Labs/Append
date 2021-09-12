@@ -11,6 +11,7 @@ import Toast_Swift
 class Home: UIViewController {
     
     static let toastDeleted = "showDeletedToastMessage"
+    static let updateHomePage = "refreshHomeAfterAdding"
     
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
@@ -18,27 +19,7 @@ class Home: UIViewController {
         view.makeToast("Pass Deleted")
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        floatRatio = view.bounds.width / 375
-        NotificationCenter.default.addObserver(self, selector: #selector(showDeleteToast), name: NSNotification.Name(Home.toastDeleted), object: nil)
-        collectionView.register(SavedPassesCell.self, forCellWithReuseIdentifier: SavedPassesCell.identifier)
-        collectionView.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderView.identifier)
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.backgroundColor = Color.bg
-        view.addSubview(collectionView)
-        NotificationCenter.default.addObserver(self, selector: #selector(pushCamera(_:)), name:
-                                                .pushCamera, object: nil)
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        collectionView.frame = view.bounds
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+    func reload() {
         collectionView.reloadData()
         if (myPasses.isEmpty) {
             let icon: UILabel = {
@@ -74,8 +55,39 @@ class Home: UIViewController {
             bgView.heightAnchor.constraint(equalTo: collectionView.heightAnchor).isActive = true
         } else {
             collectionView.backgroundView = nil
-        }}
+        }
+    }
+        
     
+    @objc func updateHome() {
+        print("UPDATING HOME")
+        reload()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        floatRatio = view.bounds.width / 375
+        NotificationCenter.default.addObserver(self, selector: #selector(showDeleteToast), name: NSNotification.Name(Home.toastDeleted), object: nil)
+        collectionView.register(SavedPassesCell.self, forCellWithReuseIdentifier: SavedPassesCell.identifier)
+        collectionView.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderView.identifier)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.backgroundColor = Color.bg
+        view.addSubview(collectionView)
+        NotificationCenter.default.addObserver(self, selector: #selector(pushCamera(_:)), name:
+                                                .pushCamera, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateHome), name: NSNotification.Name(Home.updateHomePage), object: nil)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        collectionView.frame = view.bounds
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        reload()
+        }
     // pushes the camera view
 
     @objc func pushCamera(_ notification: Notification) {
