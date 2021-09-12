@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C51BC4C026ED835F00D242ED /* ConfigurePass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51BC4BF26ED835F00D242ED /* ConfigurePass.swift */; };
+		C5C44BAC26ED647E004B70EA /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C44BAB26ED647E004B70EA /* Camera.swift */; };
 		F02ACA7926EC7714000B0E81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02ACA7826EC7714000B0E81 /* AppDelegate.swift */; };
 		F02ACA7B26EC7714000B0E81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02ACA7A26EC7714000B0E81 /* SceneDelegate.swift */; };
 		F02ACA7D26EC7714000B0E81 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02ACA7C26EC7714000B0E81 /* Home.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C51BC4BF26ED835F00D242ED /* ConfigurePass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurePass.swift; sourceTree = "<group>"; };
+		C5C44BAB26ED647E004B70EA /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		F02ACA7526EC7714000B0E81 /* append.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = append.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F02ACA7826EC7714000B0E81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F02ACA7A26EC7714000B0E81 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +96,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C5C44BAA26ED6468004B70EA /* makePass */ = {
+			isa = PBXGroup;
+			children = (
+				C5C44BAB26ED647E004B70EA /* Camera.swift */,
+				C51BC4BF26ED835F00D242ED /* ConfigurePass.swift */,
+			);
+			path = makePass;
+			sourceTree = "<group>";
+		};
 		F02ACA6C26EC7714000B0E81 = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +182,7 @@
 		F02C421D26ED4F54006C40F7 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				C5C44BAA26ED6468004B70EA /* makePass */,
 				F02C421E26ED4F5B006C40F7 /* home */,
 			);
 			path = views;
@@ -324,7 +338,9 @@
 				F02C421A26ED434F006C40F7 /* SavedPassesCell.swift in Sources */,
 				F02ACAAA26EC7C7F000B0E81 /* global.swift in Sources */,
 				F02ACA7926EC7714000B0E81 /* AppDelegate.swift in Sources */,
+				C51BC4C026ED835F00D242ED /* ConfigurePass.swift in Sources */,
 				F02ACA7B26EC7714000B0E81 /* SceneDelegate.swift in Sources */,
+				C5C44BAC26ED647E004B70EA /* Camera.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,14 +509,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 698LHTYCM9;
+				DEVELOPMENT_TEAM = HLCJWYSSKW;
 				INFOPLIST_FILE = append/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.kclabs.append;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.kclabs.append1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -513,14 +529,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 698LHTYCM9;
+				DEVELOPMENT_TEAM = HLCJWYSSKW;
 				INFOPLIST_FILE = append/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.kclabs.append;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.kclabs.append1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

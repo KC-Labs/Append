@@ -30,3 +30,6 @@ public extension UIView {
     }
 }
 
+extension Notification.Name {
+    static let pushCamera = Notification.Name("pushCamera");
+}
