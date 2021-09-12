@@ -11,10 +11,10 @@ class Home: UIViewController {
     
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     let placeholderData: [Pass] = [
-        Pass(icon: "🏀", title: "Gym Membership"),
-        Pass(icon: "🎨", title: "Art Supply Shop"),
-        Pass(icon: "💻", title: "Laptop ID"),
-        Pass(icon: "🐻", title: "Cal 1 Card")
+        Pass(icon: "🏀", title: "Gym Membership", color: Color.customColors.first!, type: "Membership Card", note: "Member #: 1234 5678 1213"),
+        Pass(icon: "🎨", title: "Art Supply Shop", color: Color.customColors.first!, type: "Membership Card", note: nil),
+        Pass(icon: "💻", title: "Laptop ID", color: Color.customColors.first!, type: "Membership Card", note: nil),
+        Pass(icon: "🐻", title: "Cal 1 Card", color: Color.customColors.first!, type: "Membership Card", note: nil),
     ]
     
     override func viewDidLoad() {
@@ -70,6 +70,13 @@ extension Home: UICollectionViewDelegate, UICollectionViewDataSource, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 40
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = PassDetail()
+        vc.modalPresentationStyle = .fullScreen
+        vc.data = placeholderData[indexPath.item]
+        present(vc, animated: true)
     }
     
     
