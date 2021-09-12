@@ -14,7 +14,12 @@ struct Color {
     static let action = UIColor(red: 47 / 255, green: 170 / 255, blue: 220 / 255, alpha: 1)
     static let destructive = UIColor(red: 235 / 255, green: 87 / 255, blue: 87 / 255, alpha: 1)
     static let customColors = [
-        UIColor(red: 73 / 255, green: 113 / 255, blue: 136 / 255, alpha: 1)
+        UIColor(red: 160 / 255, green: 93 / 255, blue: 89 / 255, alpha: 1),
+        UIColor(red: 109 / 255, green: 89 / 255, blue: 144 / 255, alpha: 1),
+        UIColor(red: 73 / 255, green: 113 / 255, blue: 136 / 255, alpha: 1),
+        UIColor(red: 72 / 255, green: 120 / 255, blue: 113 / 255, alpha: 1),
+        UIColor(red: 159 / 255, green: 145 / 255, blue: 76 / 255, alpha: 1),
+        UIColor.black
     ]
 }
 
