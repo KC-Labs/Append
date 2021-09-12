@@ -54,6 +54,7 @@ class Customization: UIViewController {
     
     
     func showWalletPage() {
+        print("showWalletPage ran")
         func process(walletLink: String) -> Void {
             print("generatePass completed")
             print("walletLink: " + walletLink)
@@ -108,8 +109,10 @@ class Customization: UIViewController {
     }
     
     @objc func addToWalletAction(sender: UIButton) {
+        print("test")
         sender.showAnimation {
             //TODO: ADD TO WALLET HERE
+            print("this is being ran")
             self.showWalletPage()
         }
     }
