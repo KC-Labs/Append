@@ -16,8 +16,8 @@ class Pass {
     public var color: UIColor
     public var type: String
     public var note: String?
-    public var data: String?
-    public var metaData: String?
+    public var barcodeData: String?
+    public var barcodeMetaData: String?
     
     init(icon: String, title: String, color: UIColor, type: String, note: String?, data: String? = nil, metaData: String? = nil) {
         self.icon = icon
@@ -25,8 +25,8 @@ class Pass {
         self.color = color
         self.type = type
         self.note = note
-        self.data = data
-        self.metaData = metaData
+        self.barcodeData = data
+        self.barcodeMetaData = metaData
     }
     
     func copy() -> Pass {
@@ -41,9 +41,32 @@ class Pass {
         note = other.note
     }
     
-    func generateScannable() -> UIImage? {
+    func convertCIImageToUIImage(ciimage:CIImage)->UIImage{
+        let context:CIContext = CIContext.init(options: nil)
+        let cgImage:CGImage = context.createCGImage(ciimage, from: ciimage.extent)!
+        let image:UIImage = UIImage.init(cgImage: cgImage)
+        return image
+    }
+    
+    func generateScannable(width: Int? = 100, height: Int? = 30) -> UIImage? {
+        let data = barcodeData!.data(using: .ascii)
+        guard let filter = CIFilter(name: "CICode128BarcodeGenerator") else {
+            return nil
+        }
+        filter.setValue(data, forKey: "inputMessage")
+        guard var ciImage = filter.outputImage else {
+            return nil
+        }
         
-        return nil
+        let imageSize = ciImage.extent.integral
+        let outputSize = CGSize(width:width!, height: height!)
+        ciImage = ciImage.transformed(by:CGAffineTransform(scaleX: outputSize.width/imageSize.width, y: outputSize.height/imageSize.height))
+
+        let image = convertCIImageToUIImage(ciimage: ciImage)
+        print("width: " + image.size.width.description)
+        print("height: " + image.size.height.description)
+        return image
+        
     }
     
     func preview() -> UIView {

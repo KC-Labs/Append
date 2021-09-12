@@ -12,6 +12,7 @@
 		A74003DDFD6349EDA827E561 /* Pods_append_appendUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3258CCBD8D135A93B7656BB2 /* Pods_append_appendUITests.framework */; };
 		C51BC4C026ED835F00D242ED /* ConfigurePass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51BC4BF26ED835F00D242ED /* ConfigurePass.swift */; };
 		C53269D826EDD3E000A4C56E /* passslotInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53269D726EDD3E000A4C56E /* passslotInterface.swift */; };
+		C53269F326EDF91800A4C56E /* ImageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53269F226EDF91800A4C56E /* ImageTest.swift */; };
 		C5C44BAC26ED647E004B70EA /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C44BAB26ED647E004B70EA /* Camera.swift */; };
 		F02ACA7926EC7714000B0E81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02ACA7826EC7714000B0E81 /* AppDelegate.swift */; };
 		F02ACA7B26EC7714000B0E81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02ACA7A26EC7714000B0E81 /* SceneDelegate.swift */; };
@@ -63,6 +64,7 @@
 		A368663A7DAC513F5937F966 /* Pods-appendTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appendTests.release.xcconfig"; path = "Target Support Files/Pods-appendTests/Pods-appendTests.release.xcconfig"; sourceTree = "<group>"; };
 		C51BC4BF26ED835F00D242ED /* ConfigurePass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurePass.swift; sourceTree = "<group>"; };
 		C53269D726EDD3E000A4C56E /* passslotInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = passslotInterface.swift; sourceTree = "<group>"; };
+		C53269F226EDF91800A4C56E /* ImageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTest.swift; sourceTree = "<group>"; };
 		C5C44BAB26ED647E004B70EA /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		D2ADC4771B5B5C9F1806B605 /* Pods_append.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_append.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5606C276E733B8CF8309C93 /* Pods-append-appendUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-append-appendUITests.release.xcconfig"; path = "Target Support Files/Pods-append-appendUITests/Pods-append-appendUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 			children = (
 				F02C422126ED57F3006C40F7 /* pass */,
 				F02C421E26ED4F5B006C40F7 /* home */,
+				C53269F226EDF91800A4C56E /* ImageTest.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -519,6 +522,7 @@
 				C51BC4C026ED835F00D242ED /* ConfigurePass.swift in Sources */,
 				F02C422526ED6035006C40F7 /* elements.swift in Sources */,
 				F02ACA7B26EC7714000B0E81 /* SceneDelegate.swift in Sources */,
+				C53269F326EDF91800A4C56E /* ImageTest.swift in Sources */,
 				F087F14826EDDF18000C8ACC /* ChooseCategory.swift in Sources */,
 				C5C44BAC26ED647E004B70EA /* Camera.swift in Sources */,
 			);
@@ -690,14 +694,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 698LHTYCM9;
+				DEVELOPMENT_TEAM = HLCJWYSSKW;
 				INFOPLIST_FILE = append/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.kclabs.append;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.kclabs.append123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -711,14 +715,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 698LHTYCM9;
+				DEVELOPMENT_TEAM = HLCJWYSSKW;
 				INFOPLIST_FILE = append/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.kclabs.append;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.kclabs.append123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

@@ -13,7 +13,8 @@ import UIKit
 class PSInterface {
     
     // calls the api with the following information and returns the URL
-    static func generatePass(whenCompleted: @escaping () -> Void, mainText: String, subText: String, barcodeData: String, barcodeText: String? = nil ) -> String {
+    static func generatePass(whenCompleted: @escaping (String) -> Void, mainText: String, subText: String, barcodeData: String, barcodeText: String? = nil ) -> Void {
+        print("generating pass with barcodeData: " + barcodeData)
         let params = ["mainText": mainText, "subText": subText, "barcodeID": barcodeData, "barcodeText": barcodeText ?? ""] as Dictionary<String, String>
         var request = URLRequest(url: URL(string: "https://api.passslot.com/v1/templates/" + psAccess.templateID + "/pass")!)
         let loginString = String(psAccess.username+":")
@@ -31,42 +32,16 @@ class PSInterface {
         
         print("here")
         let task = session.dataTask(with: request, completionHandler: {data, response, error -> Void in
-            
-            whenCompleted()
-            print(response!)
             do {
                 let json = try JSONSerialization.jsonObject(with: data!) as! Dictionary<String, AnyObject>
                 result = json
                 url = result?["url"] as? String
+                whenCompleted(url!)
                 print(json)
             } catch {
                 print("error")
             }
         })
         task.resume()
-        
-        return url ?? "_"
     }
-    
-    
-    func generateBarcode(data: String) -> UIImage? {
-        let code = UIImage(barcode: data)
-        return code
-    }
-}
-
-extension UIImage {
-
-    convenience init?(barcode: String) {
-        let data = barcode.data(using: .ascii)
-        guard let filter = CIFilter(name: "CICode128BarcodeGenerator") else {
-            return nil
-        }
-        filter.setValue(data, forKey: "inputMessage")
-        guard let ciImage = filter.outputImage else {
-            return nil
-        }
-        self.init(ciImage: ciImage)
-    }
-
 }
