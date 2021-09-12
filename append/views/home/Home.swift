@@ -20,6 +20,7 @@ class Home: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        floatRatio = view.bounds.width / 375
         NotificationCenter.default.addObserver(self, selector: #selector(showDeleteToast), name: NSNotification.Name(Home.toastDeleted), object: nil)
         collectionView.register(SavedPassesCell.self, forCellWithReuseIdentifier: SavedPassesCell.identifier)
         collectionView.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderView.identifier)
@@ -44,7 +45,7 @@ class Home: UIViewController {
                 let l = UILabel()
                 l.translatesAutoresizingMaskIntoConstraints = false
                 l.text = "📭"
-                l.font = Font.medium.withSize(size: 54)
+                l.font = Font.medium.withSize(size: 54.s)
                 l.textAlignment = .center
                 return l
             }()
@@ -52,7 +53,7 @@ class Home: UIViewController {
                 let l = UILabel()
                 l.translatesAutoresizingMaskIntoConstraints = false
                 l.text = "No saved passes"
-                l.font = Font.medium.withSize(size: 14)
+                l.font = Font.medium.withSize(size: 14.s)
                 l.textAlignment = .center
                 return l
             }()
@@ -65,7 +66,7 @@ class Home: UIViewController {
             icon.centerYAnchor.constraint(equalTo: bgView.centerYAnchor).isActive = true
             icon.widthAnchor.constraint(equalTo: collectionView.widthAnchor).isActive = true
             label.centerXAnchor.constraint(equalTo: bgView.centerXAnchor).isActive = true
-            label.topAnchor.constraint(equalTo: icon.bottomAnchor, constant: 10).isActive = true
+            label.topAnchor.constraint(equalTo: icon.bottomAnchor, constant: 10.s).isActive = true
             label.widthAnchor.constraint(equalTo: collectionView.widthAnchor).isActive = true
             bgView.centerYAnchor.constraint(equalTo: collectionView.centerYAnchor).isActive = true
             bgView.centerXAnchor.constraint(equalTo: collectionView.centerXAnchor).isActive = true
@@ -107,19 +108,19 @@ extension Home: UICollectionViewDelegate, UICollectionViewDataSource, UICollecti
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width, height: 250)
+        return CGSize(width: view.frame.width, height: 250.s)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 110, height: 110)
+        return CGSize(width: 110.s, height: 110.s)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 60, bottom: 100, right: 60)
+        return UIEdgeInsets(top: 0, left: 60.s, bottom: 100.s, right: 60.s)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 40
+        return 40.s
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

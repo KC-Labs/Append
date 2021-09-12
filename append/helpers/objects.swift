@@ -48,7 +48,7 @@ class Pass {
         let typeLabel: UILabel = {
             let label = UILabel()
             label.translatesAutoresizingMaskIntoConstraints = false
-            label.font = Font.ny.withSize(size: 12)
+            label.font = Font.ny.withSize(size: 12.s)
             label.text = type
             label.numberOfLines = 1
             label.adjustsFontSizeToFitWidth = true
@@ -60,7 +60,7 @@ class Pass {
             let label = UILabel()
             label.translatesAutoresizingMaskIntoConstraints = false
             label.text = icon + " " + title
-            label.font = Font.bold.withSize(size: 20)
+            label.font = Font.bold.withSize(size: 24.s)
             label.adjustsFontSizeToFitWidth = true
             label.textAlignment = .center
             label.numberOfLines = 1
@@ -70,7 +70,7 @@ class Pass {
             let label = UILabel()
             label.translatesAutoresizingMaskIntoConstraints = false
             label.text = note ?? ""
-            label.font = Font.regular.withSize(size: 12)
+            label.font = Font.regular.withSize(size: 12.s)
             label.numberOfLines = 3
             label.adjustsFontSizeToFitWidth = true
             label.textAlignment = .center
@@ -87,30 +87,30 @@ class Pass {
             let v = UIView()
             v.translatesAutoresizingMaskIntoConstraints = false
             v.backgroundColor = color
-            v.layer.cornerRadius = 10
+            v.layer.cornerRadius = 16
             return v
         }()
         view.addSubview(logoView)
         logoView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        logoView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
-        logoView.widthAnchor.constraint(equalToConstant: 80).isActive = true
+        logoView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20.s).isActive = true
+        logoView.widthAnchor.constraint(equalToConstant: 80.s).isActive = true
         view.addSubview(typeLabel)
         typeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        typeLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 64).isActive = true
+        typeLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 64.s).isActive = true
         typeLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8).isActive = true
         view.addSubview(titleLabel)
         titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        titleLabel.topAnchor.constraint(equalTo: typeLabel.bottomAnchor, constant: (note == nil) ? 32 : 16).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: typeLabel.bottomAnchor, constant: (note == nil) ? 48.s : 16.s).isActive = true
         titleLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8).isActive = true
         view.addSubview(noteLabel)
         noteLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        noteLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
+        noteLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20.s).isActive = true
         noteLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8).isActive = true
         view.addSubview(scannable)
         scannable.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        scannable.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        scannable.heightAnchor.constraint(equalToConstant: 75).isActive = true
-        scannable.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50).isActive = true
+        scannable.widthAnchor.constraint(equalToConstant: 200.s).isActive = true
+        scannable.heightAnchor.constraint(equalToConstant: 75.s).isActive = true
+        scannable.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50.s).isActive = true
         return view
     }
     
