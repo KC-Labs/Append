@@ -27,6 +27,8 @@ class Home: UIViewController {
         collectionView.dataSource = self
         collectionView.backgroundColor = Color.bg
         view.addSubview(collectionView)
+        NotificationCenter.default.addObserver(self, selector: #selector(pushCamera(_:)), name:
+                                                .pushCamera, object: nil)
     }
     
     override func viewDidLayoutSubviews() {
@@ -36,7 +38,11 @@ class Home: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        collectionView.reloadData()
+        collectionView.reloadData() }
+  
+    @objc func pushCamera(_ notification: Notification) {
+        let camera = Camera()
+        self.present(camera, animated:true)
     }
     
 }
@@ -54,7 +60,7 @@ extension Home: UICollectionViewDelegate, UICollectionViewDataSource, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        if kind == UICollectionView.elementKindSectionHeader {
+        if kind == UICollectionView.elementKindSectionHeader {  
             return collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HeaderView.identifier, for: indexPath)
         } else {
             return UICollectionReusableView()
@@ -88,5 +94,3 @@ extension Home: UICollectionViewDelegate, UICollectionViewDataSource, UICollecti
     
     
 }
-
-
