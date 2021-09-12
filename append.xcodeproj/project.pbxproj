@@ -139,6 +139,8 @@
 				766E5AE6B15F62BF299808FE /* Pods_appendTests.framework */,
 			);
 			name = Frameworks;
+      sourceTree = "<group>";
+		};
 		C5C44BAA26ED6468004B70EA /* makePass */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +233,7 @@
 			children = (
 				C5C44BAA26ED6468004B70EA /* makePass */,
 				F02C422126ED57F3006C40F7 /* pass */,
+				C5C44BAA26ED6468004B70EA /* makePass */,
 				F02C421E26ED4F5B006C40F7 /* home */,
 			);
 			path = views;
@@ -506,6 +509,7 @@
 				F02ACA7926EC7714000B0E81 /* AppDelegate.swift in Sources */,
 				C51BC4C026ED835F00D242ED /* ConfigurePass.swift in Sources */,
 				F02C422526ED6035006C40F7 /* elements.swift in Sources */,
+				C51BC4C026ED835F00D242ED /* ConfigurePass.swift in Sources */,
 				F02ACA7B26EC7714000B0E81 /* SceneDelegate.swift in Sources */,
 				C5C44BAC26ED647E004B70EA /* Camera.swift in Sources */,
 			);

@@ -122,8 +122,8 @@ extension Camera {
                         code.confidence > 0.9
                         else { return }
                     print("-----------")
-                    print("predicted text: " + code.payloadStringValue!)
-                    print("predicted symbology: " + code.symbology.rawValue)
+                    print("code text: " + code.payloadStringValue!)
+                    print("code symbology: " + code.symbology.rawValue)
 
                     handleObservedData(payload: code.payloadStringValue, symbology: code.symbology)
                 }
