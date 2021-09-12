@@ -10,6 +10,7 @@ import UIKit
 class HeaderView: UICollectionReusableView {
     
     static let identifier = "homeHeaderView"
+    public var addPassFunc : (() -> Void)?
     
     private let logoView: UIImageView = {
         let logoView = UIImageView()
@@ -84,7 +85,8 @@ class HeaderView: UICollectionReusableView {
     
     @objc func addPass(sender: UIButton) {
         sender.showAnimation {
-            
+            // send notification to parent viewcontroller to push camera
+            NotificationCenter.default.post(name: .pushCamera, object: nil)
         }
     }
     
