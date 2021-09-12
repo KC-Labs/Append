@@ -204,6 +204,8 @@ class ConfigurePass: UIViewController {
         tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         tap.isEnabled = false
         view.addGestureRecognizer(tap)
+        pendingPass.barcodeData = codeData
+        pendingPass.barcodeMetaData = codeSymbology?.rawValue
     }
     
     override func viewDidLayoutSubviews() {
