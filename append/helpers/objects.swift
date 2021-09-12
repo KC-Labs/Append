@@ -10,6 +10,16 @@ import PassKit
 
 var passTypes = ["Membership Card", "ID Card", "Ticket", "Coupon", "Barcode", "QR Code", "Other"]
 
+struct PassStruct: Codable {
+    var icon: String
+    var title: String
+    var colorIndex: Int
+    var type: String
+    var note: String?
+    var data: String?
+    var metaData: String?
+}
+
 class Pass {
     public var icon: String
     public var title: String
@@ -29,6 +39,10 @@ class Pass {
         self.metaData = metaData
     }
     
+    static func fromStruct(input: PassStruct) -> Pass {
+        return Pass(icon: input.icon, title: input.title, color: Color.customColors[input.colorIndex], type: input.type, note: input.note, data: input.data, metaData: input.metaData)
+    }
+    
     func copy() -> Pass {
         return Pass(icon: icon, title: title, color: color, type: type, note: note)
     }
@@ -44,6 +58,12 @@ class Pass {
     func generateScannable() -> UIImage? {
         
         return nil
+    }
+    
+    func generateStruct() -> PassStruct {
+        let colorIndex = Color.customColors.firstIndex(of: color) ?? 0
+        let output = PassStruct(icon: icon, title: title, colorIndex: colorIndex, type: type, note: note, data: data, metaData: metaData)
+        return output
     }
     
     func preview() -> UIView {
@@ -124,4 +144,29 @@ class Pass {
         return view
     }
     
+}
+
+class CacheManager {
+    static func save(data: [PassStruct]) {
+        do {
+            let encoder = JSONEncoder()
+            let encoded = try encoder.encode(data)
+            UserDefaults.standard.set(encoded, forKey: "passes")
+        } catch {
+            print("Unable to Encode Note (\(error))")
+        }
+    }
+    static func load() -> [PassStruct] {
+        if let data = UserDefaults.standard.data(forKey: "passes") {
+            do {
+                let decoder = JSONDecoder()
+                let result = try decoder.decode([PassStruct].self, from: data)
+                return result
+            } catch {
+                print("Unable to Decode Notes (\(error))")
+                return []
+            }
+        }
+        return []
+    }
 }

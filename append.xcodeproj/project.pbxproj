@@ -34,6 +34,7 @@
 		F02C422726ED6FFD006C40F7 /* NewYorkLargeRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F02C422626ED6FFD006C40F7 /* NewYorkLargeRegular.otf */; };
 		F087F14826EDDF18000C8ACC /* ChooseCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F087F14726EDDF18000C8ACC /* ChooseCategory.swift */; };
 		F087F14A26EDE10F000C8ACC /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F087F14926EDE10F000C8ACC /* CategoryCell.swift */; };
+		F087F14C26EDFD64000C8ACC /* Customization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F087F14B26EDFD64000C8ACC /* Customization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		F02C422626ED6FFD006C40F7 /* NewYorkLargeRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NewYorkLargeRegular.otf; sourceTree = "<group>"; };
 		F087F14726EDDF18000C8ACC /* ChooseCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCategory.swift; sourceTree = "<group>"; };
 		F087F14926EDE10F000C8ACC /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		F087F14B26EDFD64000C8ACC /* Customization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customization.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +262,7 @@
 				F02C422226ED5816006C40F7 /* PassDetail.swift */,
 				F087F14726EDDF18000C8ACC /* ChooseCategory.swift */,
 				F087F14926EDE10F000C8ACC /* CategoryCell.swift */,
+				F087F14B26EDFD64000C8ACC /* Customization.swift */,
 			);
 			path = pass;
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 				F02C422026ED506E006C40F7 /* objects.swift in Sources */,
 				F02ACA7D26EC7714000B0E81 /* Home.swift in Sources */,
 				C53269D826EDD3E000A4C56E /* passslotInterface.swift in Sources */,
+				F087F14C26EDFD64000C8ACC /* Customization.swift in Sources */,
 				F02C421A26ED434F006C40F7 /* SavedPassesCell.swift in Sources */,
 				F02ACAAA26EC7C7F000B0E81 /* global.swift in Sources */,
 				F02ACA7926EC7714000B0E81 /* AppDelegate.swift in Sources */,
