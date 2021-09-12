@@ -79,17 +79,16 @@ class Customization: UIViewController {
     }
     
     @objc func goHome() {
-        
+        view.window?.rootViewController?.dismiss(animated: true)
     }
     
     @objc func finish() {
         if isFinished {
-            // go home
+            view.window?.rootViewController?.dismiss(animated: true)
         } else {
             isFinished = true
             oldPass?.update(with: pass)
             myPasses.append(pass)
-            //TODO: Cache
             UIView.animate(withDuration: 0.2) {
                 self.collectionView.alpha = 0
                 self.backButton.alpha = 0

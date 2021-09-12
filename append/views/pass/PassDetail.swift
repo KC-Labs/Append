@@ -79,7 +79,7 @@ class PassDetail: UIViewController {
         sender.showAnimation {
             let ac = UIAlertController(title: "Delete this pass?", message: "You cannot undo this action once it is complete.", preferredStyle: .actionSheet)
             ac.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { _ in
-                placeholderData.removeAll { e in
+                myPasses.removeAll { e in
                     e.title == self.data.title
                 }
                 self.dismiss(animated: true) {

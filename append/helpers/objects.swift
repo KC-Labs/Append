@@ -170,7 +170,11 @@ class Pass {
 }
 
 class CacheManager {
-    static func save(data: [PassStruct]) {
+    static func save() {
+        var data: [PassStruct] = []
+        for p in myPasses {
+            data.append(p.generateStruct())
+        }
         do {
             let encoder = JSONEncoder()
             let encoded = try encoder.encode(data)
@@ -179,17 +183,19 @@ class CacheManager {
             print("Unable to Encode Note (\(error))")
         }
     }
-    static func load() -> [PassStruct] {
+    static func load() {
         if let data = UserDefaults.standard.data(forKey: "passes") {
             do {
                 let decoder = JSONDecoder()
                 let result = try decoder.decode([PassStruct].self, from: data)
-                return result
+                var array: [Pass] = []
+                for r in result {
+                    array.append(Pass.fromStruct(input: r))
+                }
+                myPasses = array
             } catch {
                 print("Unable to Decode Notes (\(error))")
-                return []
             }
         }
-        return []
     }
 }
