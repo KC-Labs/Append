@@ -80,16 +80,19 @@ class Customization: UIViewController {
     }
     
     @objc func goHome() {
+        NotificationCenter.default.post(name: NSNotification.Name(Home.updateHomePage), object: nil)
         view.window?.rootViewController?.dismiss(animated: true)
     }
     
     @objc func finish() {
         if isFinished {
+            NotificationCenter.default.post(name: NSNotification.Name(Home.updateHomePage), object: nil)
             view.window?.rootViewController?.dismiss(animated: true)
         } else {
             isFinished = true
             oldPass?.update(with: pass)
             myPasses.append(pass)
+            print(myPasses)
             UIView.animate(withDuration: 0.2) {
                 self.collectionView.alpha = 0
                 self.backButton.alpha = 0
@@ -103,8 +106,6 @@ class Customization: UIViewController {
             addToWallet.isEnabled = true
             backToHome.isEnabled = true
             titleText.text = "Your Pass is Ready"
-            
-            // fade in the other two views
         }
     }
     
