@@ -6,19 +6,21 @@
 //
 
 import UIKit
+import Toast_Swift
 
 class Home: UIViewController {
     
+    static let toastDeleted = "showDeletedToastMessage"
+    
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
-    let placeholderData: [Pass] = [
-        Pass(icon: "🏀", title: "Gym Membership", color: Color.customColors.first!, type: "Membership Card", note: "Member #: 1234 5678 1213"),
-        Pass(icon: "🎨", title: "Art Supply Shop", color: Color.customColors.first!, type: "Membership Card", note: nil),
-        Pass(icon: "💻", title: "Laptop ID", color: Color.customColors.first!, type: "Membership Card", note: nil),
-        Pass(icon: "🐻", title: "Cal 1 Card", color: Color.customColors.first!, type: "Membership Card", note: nil),
-    ]
+    
+    @objc func showDeleteToast() {
+        view.makeToast("Pass Deleted")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(showDeleteToast), name: NSNotification.Name(Home.toastDeleted), object: nil)
         collectionView.register(SavedPassesCell.self, forCellWithReuseIdentifier: SavedPassesCell.identifier)
         collectionView.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderView.identifier)
         collectionView.delegate = self
@@ -30,6 +32,11 @@ class Home: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         collectionView.frame = view.bounds
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        collectionView.reloadData()
     }
     
 }

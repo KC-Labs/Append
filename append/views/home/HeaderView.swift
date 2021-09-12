@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 class HeaderView: UICollectionReusableView {
     
@@ -84,7 +85,6 @@ class HeaderView: UICollectionReusableView {
     
     @objc func addPass(sender: UIButton) {
         sender.showAnimation {
-            
         }
     }
     

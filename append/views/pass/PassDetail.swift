@@ -10,7 +10,11 @@ import PassKit
 
 class PassDetail: UIViewController {
     
-    var data: Pass!
+    var data: Pass! {
+        didSet {
+            preview = data.preview()
+        }
+    }
     private let backArrow = IconButton.init(symbol: "arrow.backward", color: UIColor.white)
     private let iconView: UILabel = {
         let label = UILabel()
@@ -63,13 +67,22 @@ class PassDetail: UIViewController {
     
     @objc func edit(sender: UIButton) {
         sender.showAnimation {
-            
         }
     }
     
     @objc func deletePass(sender: UIButton) {
         sender.showAnimation {
-            
+            let ac = UIAlertController(title: "Delete this pass?", message: "You cannot undo this action once it is complete.", preferredStyle: .actionSheet)
+            ac.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { _ in
+                placeholderData.removeAll { e in
+                    e.title == self.data.title
+                }
+                self.dismiss(animated: true) {
+                    NotificationCenter.default.post(name: NSNotification.Name(Home.toastDeleted), object: nil)
+                }
+            }))
+            ac.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            self.present(ac, animated: true)
         }
     }
     
@@ -96,7 +109,6 @@ class PassDetail: UIViewController {
         editButton.centerYAnchor.constraint(equalTo: iconView.centerYAnchor).isActive = true
         editButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -50).isActive = true
         editButton.addTarget(self, action: #selector(edit), for: .touchDown)
-        preview = data.preview()
         view.addSubview(preview)
         preview.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 36).isActive = true
         preview.widthAnchor.constraint(equalToConstant: 280).isActive = true
@@ -104,12 +116,12 @@ class PassDetail: UIViewController {
         preview.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         preview.layer.shadowOpacity = 0.15
         preview.layer.shadowColor = UIColor.black.cgColor
-        preview.layer.shadowOffset = CGSize(width: 0, height: 10)
-        preview.layer.shadowRadius = 10
+        preview.layer.shadowOffset = CGSize(width: 0, height: 5)
+        preview.layer.shadowRadius = 5
         view.addSubview(addToWallet)
         addToWallet.translatesAutoresizingMaskIntoConstraints = false
         addToWallet.topAnchor.constraint(equalTo: preview.bottomAnchor, constant: 36).isActive = true
-        addToWallet.centerXAnchor.constraint(equalTo: preview.centerXAnchor).isActive = true
+        addToWallet.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         addToWallet.widthAnchor.constraint(equalToConstant: 200).isActive = true
         view.addSubview(deleteButton)
         deleteButton.topAnchor.constraint(equalTo: addToWallet.bottomAnchor, constant: 16).isActive = true
