@@ -11,6 +11,7 @@
 		9A2B8E12789D8B833AC3A8CB /* Pods_append.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2ADC4771B5B5C9F1806B605 /* Pods_append.framework */; };
 		A74003DDFD6349EDA827E561 /* Pods_append_appendUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3258CCBD8D135A93B7656BB2 /* Pods_append_appendUITests.framework */; };
 		C51BC4C026ED835F00D242ED /* ConfigurePass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51BC4BF26ED835F00D242ED /* ConfigurePass.swift */; };
+		C53269D826EDD3E000A4C56E /* passslotInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53269D726EDD3E000A4C56E /* passslotInterface.swift */; };
 		C5C44BAC26ED647E004B70EA /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C44BAB26ED647E004B70EA /* Camera.swift */; };
 		F02ACA7926EC7714000B0E81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02ACA7826EC7714000B0E81 /* AppDelegate.swift */; };
 		F02ACA7B26EC7714000B0E81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02ACA7A26EC7714000B0E81 /* SceneDelegate.swift */; };
@@ -59,6 +60,7 @@
 		8F13FFA2A141EBD6CA99CFD4 /* Pods-appendTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appendTests.debug.xcconfig"; path = "Target Support Files/Pods-appendTests/Pods-appendTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A368663A7DAC513F5937F966 /* Pods-appendTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appendTests.release.xcconfig"; path = "Target Support Files/Pods-appendTests/Pods-appendTests.release.xcconfig"; sourceTree = "<group>"; };
 		C51BC4BF26ED835F00D242ED /* ConfigurePass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurePass.swift; sourceTree = "<group>"; };
+		C53269D726EDD3E000A4C56E /* passslotInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = passslotInterface.swift; sourceTree = "<group>"; };
 		C5C44BAB26ED647E004B70EA /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		D2ADC4771B5B5C9F1806B605 /* Pods_append.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_append.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5606C276E733B8CF8309C93 /* Pods-append-appendUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-append-appendUITests.release.xcconfig"; path = "Target Support Files/Pods-append-appendUITests/Pods-append-appendUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +142,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C53269D626EDD37B00A4C56E /* backend */ = {
+			isa = PBXGroup;
+			children = (
+				C53269D726EDD3E000A4C56E /* passslotInterface.swift */,
+			);
+			path = backend;
+			sourceTree = "<group>";
+		};
 		F02ACA6C26EC7714000B0E81 = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +175,7 @@
 		F02ACA7726EC7714000B0E81 /* append */ = {
 			isa = PBXGroup;
 			children = (
+				C53269D626EDD37B00A4C56E /* backend */,
 				F02C421D26ED4F54006C40F7 /* views */,
 				F02ACAAD26EC9062000B0E81 /* fonts */,
 				F02ACAA826EC7C73000B0E81 /* helpers */,
@@ -494,6 +505,7 @@
 				F02C422326ED5816006C40F7 /* PassDetail.swift in Sources */,
 				F02C422026ED506E006C40F7 /* objects.swift in Sources */,
 				F02ACA7D26EC7714000B0E81 /* Home.swift in Sources */,
+				C53269D826EDD3E000A4C56E /* passslotInterface.swift in Sources */,
 				F02C421A26ED434F006C40F7 /* SavedPassesCell.swift in Sources */,
 				F02ACAAA26EC7C7F000B0E81 /* global.swift in Sources */,
 				F02ACA7926EC7714000B0E81 /* AppDelegate.swift in Sources */,
