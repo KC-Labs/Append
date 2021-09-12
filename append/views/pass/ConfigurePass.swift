@@ -32,7 +32,7 @@ class ConfigurePass: UIViewController {
             pendingPass = currentPassEditing!.copy()
         }
     }
-    var pendingPass = Pass(icon: "", title: "", color: Color.card, type: "", note: nil)
+    var pendingPass = Pass(icon: "", title: "", color: Color.customColors[2], type: "", note: nil)
     var tap = UITapGestureRecognizer()
     
     private let titleText: UILabel = {
@@ -81,7 +81,7 @@ class ConfigurePass: UIViewController {
         validateForm()
         print("codeData: " + codeData!)
         let barcode: String = codeData!
-        let title = pendingPass.title ?? ""
+        let title = pendingPass.title
         let text = pendingPass.note ?? ""
         
         func process(walletLink: String) -> Void {
