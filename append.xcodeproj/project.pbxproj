@@ -509,7 +509,6 @@
 				F02ACA7926EC7714000B0E81 /* AppDelegate.swift in Sources */,
 				C51BC4C026ED835F00D242ED /* ConfigurePass.swift in Sources */,
 				F02C422526ED6035006C40F7 /* elements.swift in Sources */,
-				C51BC4C026ED835F00D242ED /* ConfigurePass.swift in Sources */,
 				F02ACA7B26EC7714000B0E81 /* SceneDelegate.swift in Sources */,
 				C5C44BAC26ED647E004B70EA /* Camera.swift in Sources */,
 			);
