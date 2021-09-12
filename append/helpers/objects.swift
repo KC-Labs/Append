@@ -16,13 +16,17 @@ class Pass {
     public var color: UIColor
     public var type: String
     public var note: String?
+    public var data: String?
+    public var metaData: String?
     
-    init(icon: String, title: String, color: UIColor, type: String, note: String?) {
+    init(icon: String, title: String, color: UIColor, type: String, note: String?, data: String? = nil, metaData: String? = nil) {
         self.icon = icon
         self.title = title
         self.color = color
         self.type = type
         self.note = note
+        self.data = data
+        self.metaData = metaData
     }
     
     func copy() -> Pass {
@@ -35,6 +39,10 @@ class Pass {
         color = other.color
         type = other.type
         note = other.note
+    }
+    
+    func generateScannable() -> UIImage? {
+        return nil
     }
     
     func preview() -> UIView {
@@ -77,8 +85,8 @@ class Pass {
             label.minimumScaleFactor = 0.5
             return label
         }()
-        let scannable: UIView = {
-            let v = UIView()
+        let scannable: UIImageView = {
+            let v = UIImageView()
             v.translatesAutoresizingMaskIntoConstraints = false
             v.backgroundColor = UIColor.white
             return v
@@ -111,6 +119,7 @@ class Pass {
         scannable.widthAnchor.constraint(equalToConstant: 200.s).isActive = true
         scannable.heightAnchor.constraint(equalToConstant: 75.s).isActive = true
         scannable.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50.s).isActive = true
+        scannable.image = generateScannable()
         return view
     }
     
