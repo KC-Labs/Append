@@ -46,3 +46,10 @@ struct Font {
     }
     
 }
+
+var placeholderData: [Pass] = [
+    Pass(icon: "🏀", title: "Gym Membership", color: Color.customColors.first!, type: "Membership Card", note: "Member #: 1234 5678 1213"),
+    Pass(icon: "🎨", title: "Art Supply Shop", color: Color.customColors.first!, type: "Membership Card", note: nil),
+    Pass(icon: "💻", title: "Laptop ID", color: Color.customColors.first!, type: "Membership Card", note: nil),
+    Pass(icon: "🐻", title: "Cal 1 Card", color: Color.customColors.first!, type: "Membership Card", note: nil),
+]

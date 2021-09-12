@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 class HeaderView: UICollectionReusableView {
     
