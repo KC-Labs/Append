@@ -85,7 +85,7 @@ class Pass {
     
     func generateStruct() -> PassStruct {
         let colorIndex = Color.customColors.firstIndex(of: color) ?? 0
-        let output = PassStruct(icon: icon, title: title, colorIndex: colorIndex, type: type, note: note, data: data, metaData: metaData)
+        let output = PassStruct(icon: icon, title: title, colorIndex: colorIndex, type: type, note: note, data: barcodeData, metaData: barcodeMetaData)
         return output
     }
     
