@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -58,10 +58,10 @@
 		8E7CD20D5B5553BD6B54CD97 /* Pods-append-appendUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-append-appendUITests.debug.xcconfig"; path = "Target Support Files/Pods-append-appendUITests/Pods-append-appendUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8F13FFA2A141EBD6CA99CFD4 /* Pods-appendTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appendTests.debug.xcconfig"; path = "Target Support Files/Pods-appendTests/Pods-appendTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A368663A7DAC513F5937F966 /* Pods-appendTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appendTests.release.xcconfig"; path = "Target Support Files/Pods-appendTests/Pods-appendTests.release.xcconfig"; sourceTree = "<group>"; };
-		D2ADC4771B5B5C9F1806B605 /* Pods_append.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_append.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5606C276E733B8CF8309C93 /* Pods-append-appendUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-append-appendUITests.release.xcconfig"; path = "Target Support Files/Pods-append-appendUITests/Pods-append-appendUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C51BC4BF26ED835F00D242ED /* ConfigurePass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurePass.swift; sourceTree = "<group>"; };
 		C5C44BAB26ED647E004B70EA /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		D2ADC4771B5B5C9F1806B605 /* Pods_append.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_append.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5606C276E733B8CF8309C93 /* Pods-append-appendUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-append-appendUITests.release.xcconfig"; path = "Target Support Files/Pods-append-appendUITests/Pods-append-appendUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F02ACA7526EC7714000B0E81 /* append.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = append.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F02ACA7826EC7714000B0E81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F02ACA7A26EC7714000B0E81 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,7 +127,6 @@
 				8F13FFA2A141EBD6CA99CFD4 /* Pods-appendTests.debug.xcconfig */,
 				A368663A7DAC513F5937F966 /* Pods-appendTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -139,15 +138,6 @@
 				766E5AE6B15F62BF299808FE /* Pods_appendTests.framework */,
 			);
 			name = Frameworks;
-      sourceTree = "<group>";
-		};
-		C5C44BAA26ED6468004B70EA /* makePass */ = {
-			isa = PBXGroup;
-			children = (
-				C5C44BAB26ED647E004B70EA /* Camera.swift */,
-				C51BC4BF26ED835F00D242ED /* ConfigurePass.swift */,
-			);
-			path = makePass;
 			sourceTree = "<group>";
 		};
 		F02ACA6C26EC7714000B0E81 = {
@@ -231,9 +221,7 @@
 		F02C421D26ED4F54006C40F7 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				C5C44BAA26ED6468004B70EA /* makePass */,
 				F02C422126ED57F3006C40F7 /* pass */,
-				C5C44BAA26ED6468004B70EA /* makePass */,
 				F02C421E26ED4F5B006C40F7 /* home */,
 			);
 			path = views;
@@ -252,6 +240,8 @@
 		F02C422126ED57F3006C40F7 /* pass */ = {
 			isa = PBXGroup;
 			children = (
+				C51BC4BF26ED835F00D242ED /* ConfigurePass.swift */,
+				C5C44BAB26ED647E004B70EA /* Camera.swift */,
 				F02C422226ED5816006C40F7 /* PassDetail.swift */,
 			);
 			path = pass;
