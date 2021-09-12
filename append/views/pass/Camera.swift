@@ -50,10 +50,10 @@ class Camera: UIViewController {
             print("code text: " + payload!)
             print("code symbology: " + symbology.rawValue)
             let configure = ConfigurePass()
+            configure.modalPresentationStyle = .fullScreen
             configure.codeData = payload!
             configure.codeSymbology = symbology
-            let passDetail = PassDetail()
-            // self.present(passDetail, animated:true)
+            self.present(configure, animated:true)
             let ans = PSInterface.generatePass(mainText: "main test", subText: "sub test", barcodeData: "12345")
             print("received ans: " + ans)
         } else if payload != nil {

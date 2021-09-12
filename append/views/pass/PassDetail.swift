@@ -116,8 +116,8 @@ class PassDetail: UIViewController {
         editButton.addTarget(self, action: #selector(edit), for: .touchDown)
         view.addSubview(preview)
         preview.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 36).isActive = true
-        preview.widthAnchor.constraint(equalToConstant: 300.s).isActive = true
-        preview.heightAnchor.constraint(equalToConstant: 350.s).isActive = true
+        preview.widthAnchor.constraint(equalToConstant: 280.s).isActive = true
+        preview.heightAnchor.constraint(equalToConstant: 330.s).isActive = true
         preview.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         preview.layer.shadowOpacity = 0.15
         preview.layer.shadowColor = UIColor.black.cgColor
