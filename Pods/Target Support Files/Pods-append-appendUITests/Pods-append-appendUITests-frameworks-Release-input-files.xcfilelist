@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-append-appendUITests/Pods-append-appendUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/EmojiPicker/EmojiPicker.framework
 ${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework

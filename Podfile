@@ -7,6 +7,8 @@ target 'append' do
 
   # Pods for append
   pod 'Toast-Swift', '~> 5.0.1'
+  pod 'EmojiPicker', '1.1'
+
   target 'appendTests' do
     inherit! :search_paths
     # Pods for testing

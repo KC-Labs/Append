@@ -31,6 +31,10 @@ class IconButton: UIButton {
         self.tintColor = color
     }
     
+    public func updateColor(to newColor: UIColor) {
+        self.tintColor = newColor
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

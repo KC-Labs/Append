@@ -67,7 +67,12 @@ class PassDetail: UIViewController {
     
     @objc func edit(sender: UIButton) {
         sender.showAnimation {
+            let vc = ConfigurePass()
+            vc.currentPassEditing = self.data
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
         }
+        
     }
     
     @objc func deletePass(sender: UIButton) {
@@ -111,8 +116,8 @@ class PassDetail: UIViewController {
         editButton.addTarget(self, action: #selector(edit), for: .touchDown)
         view.addSubview(preview)
         preview.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 36).isActive = true
-        preview.widthAnchor.constraint(equalToConstant: 280).isActive = true
-        preview.heightAnchor.constraint(equalToConstant: 330).isActive = true
+        preview.widthAnchor.constraint(equalToConstant: 300).isActive = true
+        preview.heightAnchor.constraint(equalToConstant: 350).isActive = true
         preview.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         preview.layer.shadowOpacity = 0.15
         preview.layer.shadowColor = UIColor.black.cgColor

@@ -1,16 +1,20 @@
 PODS:
+  - EmojiPicker (1.1)
   - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
+  - EmojiPicker (= 1.1)
   - Toast-Swift (~> 5.0.1)
 
 SPEC REPOS:
   trunk:
+    - EmojiPicker
     - Toast-Swift
 
 SPEC CHECKSUMS:
+  EmojiPicker: 7d9cb698a2983501c0fa800e759dd7744638a0b9
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: d3d11bdfecd06ff70201a43cab6e882d4b581e93
+PODFILE CHECKSUM: ecd2a5449de8acfbd222b2d060e0faa7536cc818
 
 COCOAPODS: 1.10.1
