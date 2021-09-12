@@ -78,22 +78,7 @@ class ConfigurePass: UIViewController {
     }
     
     @objc func goNext() {
-        validateForm()
-        print("codeData: " + codeData!)
-        let barcode: String = codeData!
-        let title = pendingPass.title
-        let text = pendingPass.note ?? ""
-        
-        func process(walletLink: String) -> Void {
-            print("generatePass completed")
-            print("walletLink: " + walletLink)
-        }
-        let ans = PSInterface.generatePass(whenCompleted: process, mainText: title, subText: text, barcodeData: barcode)
-        
-//        // testing code
-//        let imageTest = ImageTest()
-//        self.present(imageTest, animated: true)
-//        
+        validateForm()     
     }
     
     // do your validation here

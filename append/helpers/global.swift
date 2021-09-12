@@ -79,6 +79,11 @@ extension Int {
 
 // passslot access details
 struct psAccess {
-    static let templateID = "4629516633505792"
+    static let templateBlue = "4629516633505792"
+    static let templatePurple = "5485978008158208"
+    static let templateGreen = "6172201039167488"
+    static let templateYellow = "6360857746079744"
+    static let templateBlack = "6594900714586112"
+    static let templateRed = "6695866805780480"
     static let username = "qRzZLVoAsRBEJcOUjWqgUyhxIZvLhooUnpdCGCYvtMLNaVNasonRhqjBAFZZksZz"
 }

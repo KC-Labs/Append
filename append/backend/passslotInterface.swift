@@ -13,10 +13,11 @@ import UIKit
 class PSInterface {
     
     // calls the api with the following information and returns the URL
-    static func generatePass(whenCompleted: @escaping (String) -> Void, mainText: String, subText: String, barcodeData: String, barcodeText: String? = nil ) -> Void {
+    static func generatePass(whenCompleted: @escaping (String) -> Void, mainText: String, subText: String, barcodeData: String, barcodeText: String? = nil, colorIndex: Int) -> Void {
         print("generating pass with barcodeData: " + barcodeData)
+        print("colorIndex: " + colorIndex.description)
         let params = ["mainText": mainText, "subText": subText, "barcodeID": barcodeData, "barcodeText": barcodeText ?? ""] as Dictionary<String, String>
-        var request = URLRequest(url: URL(string: "https://api.passslot.com/v1/templates/" + psAccess.templateID + "/pass")!)
+        var request = URLRequest(url: URL(string: "https://api.passslot.com/v1/templates/" + psAccess.templateGreen + "/pass")!)
         let loginString = String(psAccess.username+":")
         let loginData = loginString.data(using: String.Encoding.utf8)!
         let b64login = loginData.base64EncodedString()
