@@ -29,12 +29,12 @@ class HeaderView: UICollectionReusableView {
             addNewPass.translatesAutoresizingMaskIntoConstraints = false
             addNewPass.isUserInteractionEnabled = false
             addNewPass.text = "Add New Pass"
-            addNewPass.font = Font.semibold.withSize(size: 18)
+            addNewPass.font = Font.semibold.withSize(size: 18.s)
             return addNewPass
         }()
         addPassButton.addSubview(addNewPass)
-        addNewPass.widthAnchor.constraint(equalToConstant: 130).isActive = true
-        addNewPass.leftAnchor.constraint(equalTo: addPassButton.leftAnchor, constant: 40).isActive = true
+        addNewPass.widthAnchor.constraint(equalToConstant: 130.s).isActive = true
+        addNewPass.leftAnchor.constraint(equalTo: addPassButton.leftAnchor, constant: 40.s).isActive = true
         addNewPass.centerYAnchor.constraint(equalTo: addPassButton.centerYAnchor).isActive = true
         // plus sign view
         let plusView: UIView = {
@@ -44,33 +44,33 @@ class HeaderView: UICollectionReusableView {
                 let plusSign = UIImageView()
                 plusSign.translatesAutoresizingMaskIntoConstraints = false
                 plusSign.tintColor = .white
-                plusSign.image = UIImage(systemName: "plus", withConfiguration: UIImage.SymbolConfiguration(pointSize: 16, weight: UIImage.SymbolWeight.semibold))
+                plusSign.image = UIImage(systemName: "plus", withConfiguration: UIImage.SymbolConfiguration(pointSize: 16.s, weight: UIImage.SymbolWeight.semibold))
                 return plusSign
             }()
             plusView.addSubview(plusSign)
-            plusSign.widthAnchor.constraint(equalToConstant: 20).isActive = true
-            plusSign.heightAnchor.constraint(equalToConstant: 20).isActive = true
+            plusSign.widthAnchor.constraint(equalToConstant: 20.s).isActive = true
+            plusSign.heightAnchor.constraint(equalToConstant: 20.s).isActive = true
             plusSign.centerXAnchor.constraint(equalTo: plusView.centerXAnchor).isActive = true
             plusSign.centerYAnchor.constraint(equalTo: plusView.centerYAnchor).isActive = true
             plusView.translatesAutoresizingMaskIntoConstraints = false
             plusView.isUserInteractionEnabled = false
             plusView.backgroundColor = Color.action
-            plusView.layer.cornerRadius = 10
+            plusView.layer.cornerRadius = 10.s
             return plusView
         }()
         addPassButton.addSubview(plusView)
-        plusView.widthAnchor.constraint(equalToConstant: 40).isActive = true
-        plusView.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        plusView.widthAnchor.constraint(equalToConstant: 40.s).isActive = true
+        plusView.heightAnchor.constraint(equalToConstant: 40.s).isActive = true
         plusView.centerYAnchor.constraint(equalTo: addPassButton.centerYAnchor).isActive = true
         plusView.leftAnchor.constraint(equalTo: addNewPass.rightAnchor, constant: 30).isActive = true
         // general button autolayout
         addPassButton.translatesAutoresizingMaskIntoConstraints = false
         addPassButton.addTarget(self, action: #selector(addPass), for: .touchUpInside)
         addPassButton.backgroundColor = Color.card
-        addPassButton.layer.cornerRadius = 10
-        addPassButton.layer.shadowOffset = CGSize(width: 0, height: 5)
+        addPassButton.layer.cornerRadius = 10.s
+        addPassButton.layer.shadowOffset = CGSize(width: 0, height: 5.s)
         addPassButton.layer.shadowColor = UIColor.black.cgColor
-        addPassButton.layer.shadowRadius = 15
+        addPassButton.layer.shadowRadius = 15.s
         addPassButton.layer.shadowOpacity = 0.25
         return addPassButton
     }()
@@ -78,7 +78,7 @@ class HeaderView: UICollectionReusableView {
     private let myPassesLabel: UILabel = {
         let myPassesLabel = UILabel()
         myPassesLabel.text = "My Passes"
-        myPassesLabel.font = Font.semibold.withSize(size: 16)
+        myPassesLabel.font = Font.semibold.withSize(size: 16.s)
         myPassesLabel.translatesAutoresizingMaskIntoConstraints = false
         return myPassesLabel
     }()
@@ -93,16 +93,16 @@ class HeaderView: UICollectionReusableView {
     
     func layoutUI() {
         addSubview(logoView)
-        logoView.widthAnchor.constraint(equalToConstant: 120).isActive = true
+        logoView.widthAnchor.constraint(equalToConstant: 120.s).isActive = true
         logoView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         logoView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         addSubview(addPassButton)
-        addPassButton.widthAnchor.constraint(equalToConstant: 260).isActive = true
-        addPassButton.heightAnchor.constraint(equalToConstant: 70).isActive = true
+        addPassButton.widthAnchor.constraint(equalToConstant: 260.s).isActive = true
+        addPassButton.heightAnchor.constraint(equalToConstant: 70.s).isActive = true
         addPassButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        addPassButton.topAnchor.constraint(equalTo: logoView.bottomAnchor, constant: 30).isActive = true
+        addPassButton.topAnchor.constraint(equalTo: logoView.bottomAnchor, constant: 30.s).isActive = true
         addSubview(myPassesLabel)
-        myPassesLabel.topAnchor.constraint(equalTo: addPassButton.bottomAnchor, constant: 50).isActive = true
+        myPassesLabel.topAnchor.constraint(equalTo: addPassButton.bottomAnchor, constant: 50.s).isActive = true
         myPassesLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
     }
     

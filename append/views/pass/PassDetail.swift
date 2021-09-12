@@ -19,14 +19,14 @@ class PassDetail: UIViewController {
     private let iconView: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = label.font.withSize(48)
+        label.font = label.font.withSize(48.s)
         label.adjustsFontSizeToFitWidth = true
         return label
     }()
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = Font.bold.withSize(size: 20)
+        label.font = Font.bold.withSize(size: 24.s)
         label.adjustsFontSizeToFitWidth = true
         label.numberOfLines = 2
         label.minimumScaleFactor = 0.6
@@ -36,11 +36,11 @@ class PassDetail: UIViewController {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = Color.action
-        button.layer.cornerRadius = 10
+        button.layer.cornerRadius = 10.s
         button.layer.shadowColor = UIColor.black.cgColor
         button.layer.shadowOpacity = 0.25
-        button.layer.shadowOffset = CGSize(width: 0, height: 10)
-        button.layer.shadowRadius = 10
+        button.layer.shadowOffset = CGSize(width: 0, height: 10.s)
+        button.layer.shadowRadius = 10.s
         let img = UIImage(systemName: "square.and.pencil", withConfiguration: UIImage.SymbolConfiguration(pointSize: 20, weight: UIImage.SymbolWeight.semibold))
         button.setImage(img, for: .normal)
         button.tintColor = UIColor.white
@@ -52,11 +52,11 @@ class PassDetail: UIViewController {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.clipsToBounds = true
-        button.layer.cornerRadius = 10
-        button.layer.borderWidth = 2
+        button.layer.cornerRadius = 10.s
+        button.layer.borderWidth = 2.s
         button.layer.borderColor = Color.destructive.cgColor
         button.setTitle("Delete Pass", for: .normal)
-        button.titleLabel?.font = Font.medium.withSize(size: 14)
+        button.titleLabel?.font = Font.medium.withSize(size: 16.s)
         button.setTitleColor(Color.destructive, for: .normal)
         return button
     }()
@@ -94,44 +94,44 @@ class PassDetail: UIViewController {
     
     func layoutUI() {
         view.addSubview(backArrow)
-        backArrow.topAnchor.constraint(equalTo: view.topAnchor, constant: 64).isActive = true
-        backArrow.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 48).isActive = true
-        backArrow.widthAnchor.constraint(equalToConstant: 24).isActive = true
+        backArrow.topAnchor.constraint(equalTo: view.topAnchor, constant: 64.s).isActive = true
+        backArrow.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 48.s).isActive = true
+        backArrow.widthAnchor.constraint(equalToConstant: 24.s).isActive = true
         backArrow.addTarget(self, action: #selector(back), for: .touchUpInside)
         view.addSubview(iconView)
         iconView.text = data.icon
         iconView.topAnchor.constraint(equalTo: backArrow.bottomAnchor, constant: 36).isActive = true
-        iconView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 48).isActive = true
-        iconView.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        iconView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 48.s).isActive = true
+        iconView.widthAnchor.constraint(equalToConstant: 50.s).isActive = true
         view.addSubview(titleLabel)
         titleLabel.text = data.title
         titleLabel.topAnchor.constraint(equalTo: iconView.bottomAnchor, constant: 6).isActive = true
-        titleLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 48).isActive = true
-        titleLabel.widthAnchor.constraint(equalToConstant: 220).isActive = true
+        titleLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 48.s).isActive = true
+        titleLabel.widthAnchor.constraint(equalToConstant: 220.s).isActive = true
         view.addSubview(editButton)
-        editButton.widthAnchor.constraint(equalToConstant: 40).isActive = true
-        editButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        editButton.widthAnchor.constraint(equalToConstant: 40.s).isActive = true
+        editButton.heightAnchor.constraint(equalToConstant: 40.s).isActive = true
         editButton.centerYAnchor.constraint(equalTo: iconView.centerYAnchor).isActive = true
         editButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -50).isActive = true
         editButton.addTarget(self, action: #selector(edit), for: .touchDown)
         view.addSubview(preview)
         preview.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 36).isActive = true
-        preview.widthAnchor.constraint(equalToConstant: 300).isActive = true
-        preview.heightAnchor.constraint(equalToConstant: 350).isActive = true
+        preview.widthAnchor.constraint(equalToConstant: 300.s).isActive = true
+        preview.heightAnchor.constraint(equalToConstant: 350.s).isActive = true
         preview.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         preview.layer.shadowOpacity = 0.15
         preview.layer.shadowColor = UIColor.black.cgColor
-        preview.layer.shadowOffset = CGSize(width: 0, height: 5)
-        preview.layer.shadowRadius = 5
+        preview.layer.shadowOffset = CGSize(width: 0, height: 5.s)
+        preview.layer.shadowRadius = 5.s
         view.addSubview(addToWallet)
         addToWallet.translatesAutoresizingMaskIntoConstraints = false
-        addToWallet.topAnchor.constraint(equalTo: preview.bottomAnchor, constant: 36).isActive = true
+        addToWallet.topAnchor.constraint(equalTo: preview.bottomAnchor, constant: 36.s).isActive = true
         addToWallet.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        addToWallet.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        addToWallet.widthAnchor.constraint(equalToConstant: 200.s).isActive = true
         view.addSubview(deleteButton)
-        deleteButton.topAnchor.constraint(equalTo: addToWallet.bottomAnchor, constant: 16).isActive = true
+        deleteButton.topAnchor.constraint(equalTo: addToWallet.bottomAnchor, constant: 16.s).isActive = true
         deleteButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        deleteButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        deleteButton.widthAnchor.constraint(equalToConstant: 200.s).isActive = true
         deleteButton.heightAnchor.constraint(equalTo: addToWallet.heightAnchor).isActive = true
         deleteButton.addTarget(self, action: #selector(deletePass), for: .touchUpInside)
     }
